@@ -6,6 +6,7 @@ import Navigation from './components/Navigation'
 import Home from './components/Home'
 import { Footer } from './components/Footer'
 import Kittens from './containers/Kittens'
+import KittenContainer from './containers/KittenContainer'
 import IntakeForm from './containers/IntakeForm'
 import './App.css';
 
@@ -22,6 +23,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={ Home }/>
             <Route exact path='/kittens' component={ Kittens }/>
+            <Route path='/kittens/:id' component={ KittenContainer }/>
             <Route exact path='/intake' component={ IntakeForm }/>
           </Switch>
 
