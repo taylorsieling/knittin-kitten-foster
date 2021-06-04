@@ -205,6 +205,20 @@ a:hover, a:active {
     width: 400px;
   }
 
+  .form-wrapper {
+    margin: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .form-wrapper > div {
+    margin: 10px;
+    padding: 0px;
+    width: 300px;
+  }
+
   /* FORM */
 
   input[type=text] {
@@ -228,7 +242,7 @@ a:hover, a:active {
   }
 
   input[type=text]:focus {
-    border: 1px solid #18A558 ;
+    border: 1px solid #f9b1a5;
   }
 
   input[type=textarea] {
@@ -243,7 +257,7 @@ a:hover, a:active {
   }
 
   input[type=textarea]:focus {
-    border: 1px solid #18A558 ;
+    border: 1px solid #f9b1a5 ;
   }
 
   input[type="date"] {
@@ -268,4 +282,44 @@ a:hover, a:active {
   input[type=search]:focus {
     border: 1px solid #18A558 ;
   }
+  
+  .radio {
+  /* 1 */
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  /* 2 */
+  overflow: hidden;
+  /* 3 */
+  margin-top: -4px;
+  vertical-align: middle;
+  /* 4 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 5 */
+  background-color: transparent;
+  /* 6 */
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid #cccccc;
+  transition: 0.2s ease-in-out;
+  transition-property: background-color, border;
+}
+.radio {
+  border-radius: 50%;
+}
+/* Focus */
+.radio:focus {
+  outline: none;
+  border-color: #f9d7bc ;
+}
+/* Checked */
+.radio:checked {
+  background-color: #f9d7bc ;
+  border-color: transparent;
+}
+/* Focus */
+.radio:checked:focus {
+  background-color: #f9d7bc ;
+}
 

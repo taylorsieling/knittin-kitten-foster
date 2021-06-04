@@ -39,7 +39,7 @@ const Navigation = () => {
             </NavLink>
 
             <NavLink
-                to="/about"
+                to="/intake"
                 exact
                 style={navbar}
                 activeStyle={{
