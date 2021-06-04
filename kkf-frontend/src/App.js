@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Home from './components/Home'
 import { Footer } from './components/Footer'
+import Kittens from './containers/Kittens'
 import './App.css';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
         
           <Switch>
             <Route exact path='/' component={ Home }/>
+            <Route exact path='/kittens' component={ Kittens }/>
           </Switch>
 
         <div className="footer">
