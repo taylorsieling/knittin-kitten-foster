@@ -14,3 +14,27 @@ export const fetchKittens = () => {
     }
     
 }
+
+export const addKitten = (kitten) => {
+
+    return (dispatch) => {
+        dispatch({ type: "ADDING_KITTEN "})
+        let configObj = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(kitten)
+        }
+
+        fetch('http://localhost:3001/kittens', configObj)
+        .then(res => res.json())
+        .then(kitten => {
+            console.log('adding kitten')
+            dispatch({
+            type: "KITTEN_ADDED",
+            payload: kitten
+        })
+        })
+    }
+}

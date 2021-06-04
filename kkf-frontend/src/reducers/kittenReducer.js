@@ -11,6 +11,17 @@ const kittens = (state = { kittens: [], loading: false}, action) => {
                 kittens: action.payload,
                 loading: false
             }
+        case "ADDING_KITTEN":
+            return {
+                ...state,
+                loading: true
+            }
+        case "KITTEN_ADDED":
+            return {
+                ...state,
+                kittens: [...state.kittens, action.payload],
+                loading: false
+            }
         default:
             return state
     }

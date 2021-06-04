@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addKitten } from '../actions/kittens'
 
-export default class IntakeForm extends Component {
+class IntakeForm extends Component {
 
     state = {
         name: '',
@@ -31,6 +33,47 @@ export default class IntakeForm extends Component {
     handleSubmit = event => {
         event.preventDefault();
         console.log(this.state)
+        const kitten = {
+            name: this.state.name,
+            sex: this.state.sex,
+            age: this.state.age,
+            dob: this.state.dob,
+            weight: this.state.weight,
+            breed: this.state.breed,
+            color: this.state.color,
+            pattern: this.state.pattern,
+            altered: this.state.altered,
+            microchipped: this.state.microchipped,
+            intake_date: this.state.intake_date,
+            intake_time: this.state.intake_time,
+            location_found: this.state.location_found,
+            intake_type: this.state.intake_type,
+            status: this.state.status,
+            current_location: this.state.current_location,
+            description: this.state.description,
+            portrait_url: this.state.portrait_url
+        }
+        this.props.addKitten(kitten)
+        this.setState({
+            name: '',
+            sex: '',
+            age: '',
+            dob: '',
+            weight: '',
+            breed: '',
+            color: '',
+            pattern: '',
+            altered: '',
+            microchipped: '',
+            intake_date: '',
+            intake_time: '',
+            location_found: '',
+            intake_type: '',
+            status: '',
+            current_location: '',
+            description: '',
+            portrait_url: ''
+        })
     }
 
     render() {
@@ -169,7 +212,7 @@ export default class IntakeForm extends Component {
                     </div>
 
                     <div>
-                        <input type="submit" Name="Submit"/>
+                        <input type="submit" name="Submit"/>
                     </div>
                     
                 </div>
@@ -180,3 +223,5 @@ export default class IntakeForm extends Component {
         )
     }
 }
+
+export default connect(null, { addKitten } )(IntakeForm)
