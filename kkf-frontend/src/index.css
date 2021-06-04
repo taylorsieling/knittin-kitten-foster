@@ -208,37 +208,20 @@ a:hover, a:active {
 
   .form-grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     background-color: #fff;
     padding: 20px;
     margin: 30px 100px;
     border: 2px solid black;
   }
 
-  .form-grid > div {
-    text-align: center;
-    padding: 10px 0px;
-  }
-
   .grid-full {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: span 2;
   }
 
-  .grid-half-left {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .grid-half-right {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  @media only screen and (max-width: 600px) {
-    /* For mobile phones: */
-    [class*="grid-half-"] {
-      width: 80%;
+  @media screen and (max-width:650px){
+    .grid-full {
+    grid-column: 1;
     }
   }
 
