@@ -9,8 +9,9 @@
 /* peach: #f9d7bc */
 /* fossil: #727375 */
 
-
-/* Cards */
+* {
+  box-sizing: border-box;
+}
 
 body,
 html {
@@ -69,14 +70,14 @@ a:hover, a:active {
   text-align: center;
 }
 
-.home, .about, .kittens {
+.home, .intake, .kittens {
   padding: 80px 0px;
   margin: 0;
   color: #fff;
   align-items: center;
 }
 
-.home .about > h1 {
+.home .intake > h1 {
   text-shadow: 1px 1px #eeeeee;
 }
 
@@ -84,7 +85,7 @@ a:hover, a:active {
   background-color: #bdd1c5;
 }
 
-.about {
+.intake {
   background-color: #f9d7bc ;
 }
 
@@ -205,26 +206,54 @@ a:hover, a:active {
     width: 400px;
   }
 
-  .form-wrapper {
-    margin: 10px 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
+  .form-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px 100px;
+    border: 2px solid black;
   }
 
-  .form-wrapper > div {
-    margin: 10px;
-    padding: 0px;
-    width: 300px;
+  .form-grid > div {
+    text-align: center;
+    padding: 10px 0px;
+  }
+
+  .grid-full {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .grid-half-left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .grid-half-right {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="grid-half-"] {
+      width: 80%;
+    }
   }
 
   /* FORM */
 
+  .form {
+    margin: 30px 100px;
+    padding: 10px;
+    border: 2px solid black;
+  }
+
   input[type=text] {
     width: 80%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px 10px;
     box-sizing: border-box;
     border: 1px solid black;
     transition: 0.5s;
@@ -242,7 +271,7 @@ a:hover, a:active {
   }
 
   input[type=text]:focus {
-    border: 1px solid #f9b1a5;
+    border: 1px solid #f9d7bc ;
   }
 
   input[type=textarea] {
@@ -257,7 +286,7 @@ a:hover, a:active {
   }
 
   input[type=textarea]:focus {
-    border: 1px solid #f9b1a5 ;
+    border: 1px solid #f9d7bc  ;
   }
 
   input[type="date"] {
@@ -267,6 +296,8 @@ a:hover, a:active {
     border: 1px solid black;
     transition: 0.5s;
     outline: none;
+    color: #727375;
+    width: 80%;
   }
 
   input[type=search] {
@@ -280,7 +311,7 @@ a:hover, a:active {
   }
 
   input[type=search]:focus {
-    border: 1px solid #18A558 ;
+    border: 1px solid #f9d7bc  ;
   }
   
   .radio {
@@ -301,7 +332,7 @@ a:hover, a:active {
   /* 6 */
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  border: 1px solid #cccccc;
+  border: 1px solid #000;
   transition: 0.2s ease-in-out;
   transition-property: background-color, border;
 }

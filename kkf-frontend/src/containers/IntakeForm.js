@@ -25,31 +25,49 @@ export default class IntakeForm extends Component {
 
     render() {
         return (
-            <div>
+            <>
+            <div className="intake">
+                <div>
+                    <h1>New Kitten Intake Form</h1>
+                </div>
+            </div>
+
+            
                 <form onSubmit={this.handleSubmit}>
-                <div className="form-wrapper">
-                        <div>
-                            <input type="text" value={this.state.name} name="name" placeholder="Name" onChange={this.handleChange}/>
-                            <br/>
-                            <input type="text" value={this.state.age} name="age" placeholder="Age" onChange={this.handleChange}/>
-                            <br/>
-                            <input type="text" value={this.state.weight} name="weight" placeholder="Weight" onChange={this.handleChange}/>
-                            <br/>
-                            <input type="text" value={this.state.breed} name="breed" placeholder="Breed" onChange={this.handleChange}/>
-                        </div>
-                        <div>
-                            <div>
-                                <label class="">Sex: </label><br/>
-                                <input className="radio" type="radio" id="male" name="sex" value="male"/>
-                                <label for="male">Male</label>
-                                <input className="radio" type="radio" id="female" name="sex" value="female"/>
-                                <label for="female">Female</label>
-                            </div>
-                            <br/>
-                            <label>Date of Birth: </label><br/>
-                            <input type="date" value={this.state.dob} name="dob" onChange={this.handleChange}/>
+                <div className="form-grid">
+                    
+                    <div className="grid-full"><h3>Kitten Description</h3></div>
+                    
+                    <div className="grid-half-left">
+                        <input type="text" value={this.state.name} name="name" placeholder="Name" onChange={this.handleChange}/>
+                        <input type="text" value={this.state.weight} name="weight" placeholder="Weight" onChange={this.handleChange}/>
+                        <input type="text" value={this.state.color} name="color" placeholder="Color" onChange={this.handleChange}/>
+                        <div className="label">
+                            <label class="">Sex: </label><br/>
+                            <input className="radio" type="radio" id="male" name="sex" value="male"/>
+                            <label for="male">Male</label>
+                            <input className="radio" type="radio" id="female" name="sex" value="female"/>
+                            <label for="female">Female</label>
                         </div>
                     </div>
+
+                    <div className="grid-half-right">
+                        <input type="text" value={this.state.age} name="age" placeholder="Age" onChange={this.handleChange}/>
+                        <input type="text" value={this.state.breed} name="breed" placeholder="Breed" onChange={this.handleChange}/>
+                        <input type="text" value={this.state.pattern} name="pattern" placeholder="Pattern" onChange={this.handleChange}/>
+                        <div className="label">
+                            <label>Date of Birth: </label><br/>
+                            <input type="date" value={this.state.dob} name="dob" onChange={this.handleChange}/>
+                        </div>     
+                    </div>
+
+                    <div className="grid-full"><h3>Medical Information</h3></div>
+
+                    <div className="grid-full"><h3>Intake Information</h3></div>
+
+                    <div className="grid-full"><h3>Adoption Information</h3></div>
+                       
+                 
 
                     <div className="form-wrapper">
                         <div>
@@ -66,10 +84,9 @@ export default class IntakeForm extends Component {
                     </div>
                     <div className="form-wrapper">
                         <div>
-                            <input type="text" value={this.state.color} name="color" placeholder="Color" onChange={this.handleChange}/>
+                           
                         </div>
                         <div>
-                            <input type="text" value={this.state.pattern} name="pattern" placeholder="Pattern" onChange={this.handleChange}/>
                         </div>
                     </div>
                     <div className="form-wrapper">
@@ -97,8 +114,10 @@ export default class IntakeForm extends Component {
                             <input type="time" value={this.state.time} name="time" onChange={this.handleChange}/>
                         </div>
                     </div>
+                    </div>
                 </form>
-            </div>
+            
+            </>
         )
     }
 }
