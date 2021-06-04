@@ -26,19 +26,6 @@ const Navigation = () => {
             </NavLink>
 
             <NavLink
-                to="/about"
-                exact
-                style={navbar}
-                activeStyle={{
-                    textdecoration: 'underline',
-                    fontWeight: 'bold',
-                    color: '#f9d7bc '
-                }}
-            >
-            ABOUT
-            </NavLink>
-
-            <NavLink
                 to="/kittens"
                 exact
                 style={navbar}
@@ -52,6 +39,19 @@ const Navigation = () => {
             </NavLink>
 
             <NavLink
+                to="/about"
+                exact
+                style={navbar}
+                activeStyle={{
+                    textdecoration: 'underline',
+                    fontWeight: 'bold',
+                    color: '#f9d7bc '
+                }}
+            >
+            INTAKE
+            </NavLink>
+
+            <NavLink
                 to="/admin"
                 exact
                 style={navbar}
@@ -61,7 +61,7 @@ const Navigation = () => {
                     color: '#C4dcdf'
                 }}
             >
-            ADMIN
+            ADOPTION
             </NavLink>
 
         </div>
