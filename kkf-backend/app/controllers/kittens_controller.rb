@@ -4,7 +4,6 @@ class KittensController < ApplicationController
   # GET /kittens
   def index
     @kittens = Kitten.all
-
     render json: @kittens
   end
 
@@ -45,7 +44,7 @@ class KittensController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def kitten_params
-      params.fetch(:kitten, {})
-    end
+    def kitten_params 
+      params.require(:kitten).permit(:name, :sex, :age, :dob, :weight, :breed, :color, :pattern, :altered, :microchipped, :declawed, :intake_date, :intake_time, :location_found, :intake_type, :status, :current_location, :description, :portrait_url)
+  end
 end
