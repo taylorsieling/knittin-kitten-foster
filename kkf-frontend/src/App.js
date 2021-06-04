@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
-// import Navigation from './components/Navigation'
+import Navigation from './components/Navigation'
 import './App.css';
 
 class App extends Component {
@@ -11,9 +11,9 @@ class App extends Component {
 
       <Router>
 
-        {/* <div className="navbar">
+        <div className="navbar">
         <Navigation />
-        </div> */}
+        </div>
         
           <Switch>
             <Route exact path='/' component={ Home }/>
