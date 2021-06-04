@@ -23,6 +23,16 @@ export default class IntakeForm extends Component {
         portrait_url: ''
     }
 
+    handleChange = event => {
+        console.log(event.target.value)
+        this.setState({ [event.target.name]: event.target.value })
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        console.log(this.state)
+    }
+
     render() {
         return (
             <>
@@ -45,10 +55,10 @@ export default class IntakeForm extends Component {
                     <div>
                         <div className="label">
                             <label>Sex: </label> &nbsp; &nbsp;
-                            <input className="radio" type="radio" id="male" name="sex" value="male"/> &nbsp;
-                            <label for="male">Male</label> &nbsp;
-                            <input className="radio" type="radio" id="female" name="sex" value="female"/> &nbsp;
-                            <label for="female">Female</label>
+                            <input className="radio" type="radio" id="male" name="sex" value="male" checked={this.state.sex === "male"} onChange={this.handleChange}/> &nbsp;
+                            <label htmlFor="male">Male</label> &nbsp;
+                            <input className="radio" type="radio" id="female" name="sex" value="female" checked={this.state.sex === "female"} onChange={this.handleChange}/> &nbsp;
+                            <label htmlFor="female">Female</label>
                         </div>
                     </div>
 
@@ -82,22 +92,22 @@ export default class IntakeForm extends Component {
                         <div>
                             <div className="label">
                                 <label>Altered: </label> &nbsp; &nbsp;
-                                <input className="radio" type="radio" id="yes" name="yes" value={this.state.altered}/> &nbsp;
-                                <label for="yes">Yes</label> &nbsp;
-                                <input className="radio" type="radio" id="no" name="no" value={this.state.altered}/> &nbsp;
-                                <label for="no">No</label>
+                                <input className="radio" type="radio" id="yes" name="altered" value="yes" checked={this.state.altered === "yes"} onChange={this.handleChange}/> &nbsp;
+                                <label htmlFor="yes">Yes</label> &nbsp;
+                                <input className="radio" type="radio" id="no" name="altered" value="no" checked={this.state.altered === "no"} onChange={this.handleChange}/> &nbsp;
+                                <label htmlFor="no">No</label>
                             </div>
                         </div> 
                     </div>
 
                     <div>
                         <div>
-                            <div className="label">
+                            <div className="label" >
                                 <label>Microchipped: </label> &nbsp; &nbsp;
-                                <input className="radio" type="radio" id="yes" name="yes" value={this.state.microchipped}/> &nbsp;
-                                <label for="yes">Yes</label> &nbsp;
-                                <input className="radio" type="radio" id="no" name="no" value={this.state.microchipped}/> &nbsp;
-                                <label for="no">No</label>
+                                <input className="radio" type="radio" id="yes" value="yes" name="microchipped" checked={this.state.microchipped === "yes"} onChange={this.handleChange}/> &nbsp;
+                                <label htmlFor="yes">Yes</label> &nbsp;
+                                <input className="radio" type="radio" id="no" value="no" name="microchipped" checked={this.state.microchipped === "no"} onChange={this.handleChange}/> &nbsp;
+                                <label htmlFor="no">No</label>
                             </div>
                         </div> 
                     </div>
@@ -156,6 +166,10 @@ export default class IntakeForm extends Component {
 
                     <div className="grid-full">
                         <input type="text" value={this.state.portrait_url} name="portrait_url" placeholder="Portrait URL" onChange={this.handleChange}/>
+                    </div>
+
+                    <div>
+                        <input type="submit" Name="Submit"/>
                     </div>
                     
                 </div>
