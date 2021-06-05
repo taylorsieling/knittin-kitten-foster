@@ -14,29 +14,29 @@ export const fetchApps = () => {
     }
 }
 
-// export const addApp = (app) => {
+export const addApp = (app) => {
 
-//     return (dispatch) => {
-//         dispatch({ type: "ADDING_APP"})
-//         let configObj = {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(app)
-//         }
+    return (dispatch) => {
+        dispatch({ type: "ADDING_APP"})
+        let configObj = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(app)
+        }
 
-//         fetch('http://localhost:3001/applications', configObj)
-//         .then(res => res.json())
-//         .then(app => {
-//             console.log('adding app')
-//             dispatch({
-//             type: "APP_ADDED",
-//             payload: app
-//         })
-//         })
-//     }
-// }
+        fetch('http://localhost:3001/applications', configObj)
+        .then(res => res.json())
+        .then(app => {
+            console.log('adding app')
+            dispatch({
+            type: "APP_ADDED",
+            payload: app
+        })
+        })
+    }
+}
 
 // export const setKitten = (appID) => {
 //     return (dispatch) => {

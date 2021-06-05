@@ -33,12 +33,14 @@ class Applications extends Component {
                     </div>
 
                     <h2>Current Applications</h2>
-                    <div className="wrapper">
+                    <div>
+                        <ul className="app">
                         {this.props.apps.map((app => {
                         return (
                         <Application key={app.id} app={app} />
                         )}
                         ))}
+                        </ul>
                     </div>
                 </>
             )

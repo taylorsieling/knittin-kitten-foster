@@ -11,6 +11,7 @@ import IntakeForm from './containers/IntakeForm'
 import Applications from './containers/Applications'
 import ApplicationContainer from './containers/ApplicationContainer'
 import './App.css';
+import ApplicationForm from './containers/ApplicationForm'
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
             <Route exact path='/intake' component={ IntakeForm }/>
             <Route exact path='/applications' component={ Applications }/>
             <Route path='/applications/:id' component={ ApplicationContainer }/>
+            <Route exact path='/apply' component={ApplicationForm}/>
           </Switch>
 
         <div className="footer">
