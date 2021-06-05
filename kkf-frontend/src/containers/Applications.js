@@ -6,7 +6,6 @@ import { fetchApps } from '../actions/applications'
 class Applications extends Component {
 
     componentDidMount(){
-        debugger
         console.log("applicationDidMount")
         this.props.fetchApps()
     }
@@ -24,6 +23,7 @@ class Applications extends Component {
             </div>
             )
         } else {
+            console.log(this.props.apps)
             return (
                 <>
                     <div className="applications">
@@ -34,10 +34,9 @@ class Applications extends Component {
 
                     <h2>Current Applications</h2>
                     <div className="wrapper">
-                        {/* Filter/Search Component */}
-                        {this.props.applications.map((app => {
+                        {this.props.apps.map((app => {
                         return (
-                        <Application key={app.id} application={app} />
+                        <Application key={app.id} app={app} />
                         )}
                         ))}
                     </div>
@@ -57,7 +56,7 @@ class Applications extends Component {
 
 const mapStateToProps = state => {
     return {
-        applications: state.applicationReducer.applications,
+        apps: state.applicationReducer.apps,
         loading: state.applicationReducer.loading
     }
 }

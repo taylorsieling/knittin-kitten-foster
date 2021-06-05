@@ -2,7 +2,7 @@ export const fetchApps = () => {
 
     return (dispatch) => {
         dispatch({ type: "LOADING_APPS"})
-        fetch('http://localhost:3001/applictions')
+        fetch('http://localhost:3001/applications')
         .then(res => res.json())
         .then(apps => {
             console.log('fetching apps')

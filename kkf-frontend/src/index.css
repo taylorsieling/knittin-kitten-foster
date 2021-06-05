@@ -79,7 +79,7 @@ a.kitten-link {
   text-align: center;
 }
 
-.home, .intake, .kittens {
+.home, .intake, .kittens, .applications {
   padding: 80px 0px;
   margin: 0;
   color: #fff;
@@ -100,6 +100,10 @@ a.kitten-link {
 
 .kittens {
   background-color: #C4dcdf;
+}
+
+.applications {
+  background-color: #f9b1a5;
 }
 
 .footer {
