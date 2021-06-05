@@ -52,7 +52,7 @@ const Navigation = () => {
             </NavLink>
 
             <NavLink
-                to="/admin"
+                to="/applications"
                 exact
                 style={navbar}
                 activeStyle={{
@@ -61,7 +61,7 @@ const Navigation = () => {
                     color: '#C4dcdf'
                 }}
             >
-            ADOPTION
+            APPLICATIONS
             </NavLink>
 
         </div>
