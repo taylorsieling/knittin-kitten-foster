@@ -60,6 +60,15 @@ a:hover, a:active {
   font-weight: bold;
 }
 
+a.kitten-link {
+  color: black;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+
 
 #root {
   padding: 0;

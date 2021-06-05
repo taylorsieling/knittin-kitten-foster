@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom' 
 import '../index.css'
 
 const Kitten = ({kitten}) => {
@@ -13,7 +14,8 @@ const Kitten = ({kitten}) => {
                 <p className="kitten-desc">
                     Sex: {kitten.sex}<br/>
                     Age: {kitten.age}<br/>
-                    {kitten.breed} - {kitten.pattern}
+                    {kitten.breed} - {kitten.pattern}<br/><br/>
+                    <Link className="kitten-link" key={kitten.id} to={`/kittens/${kitten.id}`}>{kitten.name}'s Details</Link>
                 </p>
             </div>
         </div>

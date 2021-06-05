@@ -38,3 +38,18 @@ export const addKitten = (kitten) => {
         })
     }
 }
+
+export const setKitten = (kittenID) => {
+    return (dispatch) => {
+        dispatch({ type: "SETTING_KITTEN" })
+        fetch('http://localhost:3001/kittens/' + kittenID)
+        .then(res => res.json())
+        .then(kitten => {
+            console.log('fetching set kitten')
+            dispatch({
+                type: 'KITTEN_SET',
+                payload: kitten
+            })
+        })
+    }
+}
