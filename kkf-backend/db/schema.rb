@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2021_06_03_220755) do
 
   create_table "applications", force: :cascade do |t|
-    t.integer "kitten_id"
     t.string "first_name"
     t.string "last_name"
     t.string "email"
