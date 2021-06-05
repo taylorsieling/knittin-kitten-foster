@@ -46,6 +46,6 @@ class ApplicationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def application_params
-      params.fetch(:application, {})
+      params.require(:application).permit(:first_name, :last_name, :email, :phone, :housing, :children, :employment, :work_from_home, :hours_unattended, :experience, :kitten_type, :give_medication, :provide_food, :current_pets)
     end
 end
