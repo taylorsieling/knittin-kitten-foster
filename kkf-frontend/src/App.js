@@ -8,6 +8,8 @@ import { Footer } from './components/Footer'
 import Kittens from './containers/Kittens'
 import KittenContainer from './containers/KittenContainer'
 import IntakeForm from './containers/IntakeForm'
+import Applications from './containers/Applications'
+import ApplicationContainer from './containers/ApplicationContainer'
 import './App.css';
 
 class App extends Component {
@@ -25,6 +27,8 @@ class App extends Component {
             <Route exact path='/kittens' component={ Kittens }/>
             <Route path='/kittens/:id' component={ KittenContainer }/>
             <Route exact path='/intake' component={ IntakeForm }/>
+            <Route exact path='/applications' component={ Applications }/>
+            <Route path='/applications/:id' component={ ApplicationContainer }/>
           </Switch>
 
         <div className="footer">
