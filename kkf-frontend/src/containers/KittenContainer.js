@@ -6,38 +6,39 @@ import KittenShow from '../components/KittenShow'
 class KittenContainer extends Component {
 
     componentDidMount() {
-        console.log('kittenContainer did mount')
-        console.log(this.props.match.params.id)
-        const kittenID = this.props.match.params.id
+        const kittenID = parseInt(this.props.match.params.id)
         this.props.setKitten(kittenID)
     }
 
-
-    // handleLoading = () => {
-    //     if (this.props.loading) {
-    //         return (
-    //             <div>
-    //                 <div className="kittens">
-    //                 <div className="home-text">
-    //                     <h1>Knittin' Kitten Foster</h1>
-    //                 </div>
-    //             </div>
-    //             <div><h2>Grabbing the precious baby... one moment please!</h2></div>
-    //         </div>
-    //         )
-    //     } else {
-
-    //     }
-    // }
+    handleLoading = () => {
+        if (this.props.loading) {
+            return (
+                <div>
+                    <div className="kittens">
+                    <div className="home-text">
+                        <h1>Knittin' Kitten Foster</h1>
+                    </div>
+                </div>
+                <div><h2>Grabbing the precious baby... one moment please!</h2></div>
+            </div>
+            )
+        } else {
+            console.log('kitten loaded', this.props.kitten)
+            return (
+                <div>
+                    <h1>Kitten Container</h1>
+                    <KittenShow id={this.props.match.params.id} kitten={this.props.kitten}/>
+                </div>
+            )
+        }
+    }
     
 
     render() {
-        const kitten = this.props.kitten
-        console.log("just kitten", kitten)
+        console.log('container render',this.props.kitten)
         return (
             <div>
-                <h1>Kitten Container</h1>
-                <KittenShow kitten={kitten}/>
+                {this.handleLoading()}
             </div>
         )
     }

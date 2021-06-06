@@ -136,6 +136,14 @@ a.kitten-link {
   text-align: left;
 }
 
+.kitten-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #fff;
+  padding: 20px;
+  margin: auto;
+}
+
   /* CARDS */
 
   .card {

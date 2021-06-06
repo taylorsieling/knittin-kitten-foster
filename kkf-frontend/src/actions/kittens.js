@@ -50,6 +50,7 @@ export const setKitten = (kittenID) => {
                 type: 'KITTEN_SET',
                 payload: kitten
             })
+            console.log('fetched', kitten)
         })
     }
 }

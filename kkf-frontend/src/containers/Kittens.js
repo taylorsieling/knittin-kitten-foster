@@ -37,7 +37,6 @@ class Kittens extends Component {
 
                     <h2>Our Current Kittens</h2>
                     <div className="wrapper">
-                        {/* Filter/Search Component */}
                         {this.props.kittens.map((kitten => {
                         return (
                         <Kitten key={kitten.id} kitten={kitten} />

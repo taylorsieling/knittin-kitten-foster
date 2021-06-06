@@ -1,10 +1,12 @@
 import React from 'react'
 
-const KittenShow = ({kitten}) => {
+const KittenShow = (props) => {
+    console.log('kitten show', props)
     return (
-        <div>
+        <div className="kitten-grid">
+            
             <h3>Hi, I'm the kitten show component!</h3>
-            <p>{kitten.name}</p>
+            <p>{props.kitten.name}</p>
         </div>
     )
 }
