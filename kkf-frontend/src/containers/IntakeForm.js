@@ -2,30 +2,28 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addKitten } from '../actions/kittens'
 
-const initState = {
-    name: '',
-    sex: '',
-    age: '',
-    dob: '',
-    weight: '',
-    breed: '',
-    color: '',
-    pattern: '',
-    altered: '',
-    microchipped: '',
-    intake_date: '',
-    intake_time: '',
-    location_found: '',
-    intake_type: '',
-    status: '',
-    current_location: '',
-    description: '',
-    portrait_url: ''
-}
-
 class IntakeForm extends Component {
 
-    state = { initState }
+    state = { 
+        name: '',
+        sex: '',
+        age: '',
+        dob: '',
+        weight: '',
+        breed: '',
+        color: '',
+        pattern: '',
+        altered: '',
+        microchipped: '',
+        intake_date: '',
+        intake_time: '',
+        location_found: '',
+        intake_type: '',
+        status: '',
+        current_location: '',
+        description: '',
+        portrait_url: ''
+    }
 
     handleChange = event => {
         console.log(event.target.value)
@@ -56,7 +54,26 @@ class IntakeForm extends Component {
             portrait_url: this.state.portrait_url
         }
         this.props.addKitten(kitten)
-        this.setState({ initState })
+        this.setState({ 
+            name: '',
+            sex: '',
+            age: '',
+            dob: '',
+            weight: '',
+            breed: '',
+            color: '',
+            pattern: '',
+            altered: '',
+            microchipped: '',
+            intake_date: '',
+            intake_time: '',
+            location_found: '',
+            intake_type: '',
+            status: '',
+            current_location: '',
+            description: '',
+            portrait_url: ''
+         })
     }
 
     render() {

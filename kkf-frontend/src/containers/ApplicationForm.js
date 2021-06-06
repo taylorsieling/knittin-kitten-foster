@@ -2,30 +2,28 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addApp } from '../actions/applications'
 
-const initState = {
-    name: '',
-    sex: '',
-    age: '',
-    dob: '',
-    weight: '',
-    breed: '',
-    color: '',
-    pattern: '',
-    housing: '',
-    children: '',
-    intake_date: '',
-    intake_time: '',
-    location_found: '',
-    employment: '',
-    status: '',
-    current_location: '',
-    description: '',
-    portrait_url: ''
-}
-
 class ApplicationForm extends Component {
 
-    state = { initState }
+    componentDidMount() {
+        console.log(this.state.children)
+    }
+
+    state = { 
+        first_name: '',
+        last_name: '',
+        email: '',
+        phone: '',
+        housing: '',
+        children: false,
+        employment: '',
+        work_from_home: '',
+        hours_unattended: '',
+        experience: '',
+        kitten_type: '',
+        give_medication: '',
+        provide_food: '',
+        current_pets: ''
+    }
 
     handleChange = event => {
         console.log(event.target.value)
@@ -35,28 +33,39 @@ class ApplicationForm extends Component {
     handleSubmit = event => {
         event.preventDefault();
         console.log(this.state)
-        const kitten = {
-            name: this.state.name,
-            sex: this.state.sex,
-            age: this.state.age,
-            dob: this.state.dob,
-            weight: this.state.weight,
-            breed: this.state.breed,
-            color: this.state.color,
-            pattern: this.state.pattern,
+        const app = {
+            first_name: this.state.first_name,
+            last_name: this.state.last_name,
+            email: this.state.email,
+            phone: this.state.phone,
             housing: this.state.housing,
             children: this.state.children,
-            intake_date: this.state.intake_date,
-            intake_time: this.state.intake_time,
-            location_found: this.state.location_found,
             employment: this.state.employment,
-            status: this.state.status,
-            current_location: this.state.current_location,
-            description: this.state.description,
-            portrait_url: this.state.portrait_url
+            work_from_home: this.state.work_from_home,
+            hours_unattended: this.state.hours_unattended,
+            experience: this.state.experience,
+            kitten_type: this.state.kitten_type,
+            give_medication: this.state.give_medication,
+            provide_food: this.state.provide_food,
+            current_pets: this.state.current_pets,
         }
-        this.props.addKitten(kitten)
-        this.setState({ initState })
+        this.props.addApp(app)
+        this.setState({ 
+            first_name: '',
+            last_name: '',
+            email: '',
+            phone: '',
+            housing: '',
+            children: false,
+            employment: '',
+            work_from_home: '',
+            hours_unattended: '',
+            experience: '',
+            kitten_type: '',
+            give_medication: '',
+            provide_food: '',
+            current_pets: ''
+        })
     }
 
     render() {
@@ -98,19 +107,19 @@ class ApplicationForm extends Component {
                     <div>
                         <div>
                             <label>Housing Status: </label> <br/><br/>
-                            <input className="radio" type="radio" id="rent" name="housing" value="Rent" checked={this.state.housing === "rent"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="yes">Rent Home</label> &nbsp;
-                            <input className="radio" type="radio" id="own" name="housing" value="Own" checked={this.state.housing === "own"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="no">Own Home</label>
+                            <input className="radio" type="radio" id="housing" name="housing" value="rent" checked={this.state.housing === "rent"} onChange={this.handleChange}/> &nbsp;
+                            <label htmlFor="rent">Rent Home</label> &nbsp; &nbsp;
+                            <input className="radio" type="radio" id="housing" name="housing" value="own" checked={this.state.housing === "own"} onChange={this.handleChange}/> &nbsp;
+                            <label htmlFor="own">Own Home</label>
                         </div> 
                     </div>
 
                     <div>
                         <div>
                             <label>Are their children living in your home? </label> <br/><br/>
-                            <input className="radio" type="radio" id="yes" value="yes" name="children" checked={this.state.children === "yes"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="yes">Yes</label> &nbsp;
-                            <input className="radio" type="radio" id="no" value="no" name="children" checked={this.state.children === "no"} onChange={this.handleChange}/> &nbsp;
+                            <input className="radio" type="radio" id="children" value="yes" name="children" checked={this.state.children === "yes"} onChange={this.handleChange}/> &nbsp;
+                            <label htmlFor="yes">Yes</label> &nbsp; &nbsp;
+                            <input className="radio" type="radio" id="children" value="no" name="children" checked={this.state.children === "no"} onChange={this.handleChange}/> &nbsp;
                             <label htmlFor="no">No</label>
                         </div> 
                     </div>
@@ -132,7 +141,7 @@ class ApplicationForm extends Component {
                     <div>
                         <div>
                             <label>Do you work from home?</label> <br/>
-                            <select className="select" name='wfh' onChange={this.handleChange} value={this.state.wfh}>
+                            <select className="select" name='work_from_home' onChange={this.handleChange} value={this.state.work_from_home}>
                                 <option defaultValue value=''>Choose Status</option>
                                 <option value='full-time'>Full-Time</option>
                                 <option value='part-time'>Part-Time</option>
@@ -142,7 +151,7 @@ class ApplicationForm extends Component {
                     </div>
 
                     <div>
-                        <div className="label"><label>How many hours each day would your fosters be unattended?</label></div>
+                        <div className="label"><label>How many hours/day would your fosters be unattended?</label></div>
                         <input type="text" value={this.state.hours_unattended} placeholder="Hours Unattended" name="hours_unattended" onChange={this.handleChange}/>
                     </div>
 
@@ -158,8 +167,24 @@ class ApplicationForm extends Component {
                             <input type="textarea" value={this.state.experience} name="experience" onChange={this.handleChange}/>
                     </div>
 
-                    <div className="grid-full">
-                        <label>What type of fosters are you willing to take on?</label>
+                    <div>
+                        <div className="label"><label>Are you willing and able to administer medication?</label></div>
+                        <input className="radio" type="radio" id="medication" name="give_medication" value="yes" checked={this.state.give_medication === "yes"} onChange={this.handleChange}/> &nbsp;
+                        <label htmlFor="yes">Yes</label> &nbsp; &nbsp;
+                        <input className="radio" type="radio" id="medication" name="give_medication" value="no" checked={this.state.give_medication === "no"} onChange={this.handleChange}/> &nbsp;
+                        <label htmlFor="no">No</label>
+                    </div>
+
+                    <div>
+                        <div className="label"><label>Are you willing and able to provide food and supplies?</label></div>
+                        <input className="radio" type="radio" id="provide_food" name="provide_food" value="yes" checked={this.state.provide_food === "yes"} onChange={this.handleChange}/> &nbsp;
+                        <label htmlFor="yes">Yes</label> &nbsp; &nbsp;
+                        <input className="radio" type="radio" id="provide_food" name="provide_food" value="no" checked={this.state.provide_food === "no"} onChange={this.handleChange}/> &nbsp;
+                        <label htmlFor="no">No</label>
+                    </div>
+
+                    <div>
+                        <div className="label"><label>What type of fosters are you willing and able to care for?</label></div>
                         <select className="select" name='kitten_type' onChange={this.handleChange} value={this.state.kitten_type}>
                             <option defaultValue value=''>Choose Type</option>
                             <option value='bottle-babies'>Bottle Babies</option>
@@ -171,27 +196,7 @@ class ApplicationForm extends Component {
                     </div>
 
                     <div>
-                        <div>
-                            <div className="label"><label>Are you willing and able to administer medication?</label></div>
-                            <input className="radio" type="radio" id="medication" name="give_medication" value="yes" checked={this.state.give_medication === "yes"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="yes">Yes</label> &nbsp;
-                            <input className="radio" type="radio" id="medication" name="give_medication" value="no" checked={this.state.give_medication === "no"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="no">No</label>
-                        </div> 
-                    </div>
-
-                    <div>
-                        <div>
-                            <div className="label"><label>Are you willing and able to provide food and supplies?</label></div>
-                            <input className="radio" type="radio" id="provide_food" name="provide_food" value="yes" checked={this.state.provide_food === "yes"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="yes">Yes</label> &nbsp;
-                            <input className="radio" type="radio" id="provide_food" name="provide_food" value="no" checked={this.state.provide_food === "no"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="no">No</label>
-                        </div> 
-                    </div>
-
-
-                    <div>
+                        <div><br/><br/><br/></div>
                         <input type="submit" name="Submit"/>
                     </div>
                     

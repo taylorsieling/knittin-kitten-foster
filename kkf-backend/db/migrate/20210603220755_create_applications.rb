@@ -7,7 +7,7 @@ class CreateApplications < ActiveRecord::Migration[6.1]
       t.string "phone"
       t.string "housing"
       t.boolean "children"
-      t.boolean "employment"
+      t.string "employment"
       t.string "work_from_home"
       t.string "hours_unattended"
       t.string "experience"

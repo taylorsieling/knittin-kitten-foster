@@ -255,9 +255,8 @@ a.kitten-link {
     }
   }
 
-  .div > label {
-    text-align: left;
-    width: 80%;
+  .label {
+    width: 90%;
     padding: 12px 20px;
     margin: 8px 10px;
   }

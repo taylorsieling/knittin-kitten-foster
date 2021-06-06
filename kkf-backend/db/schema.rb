@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_06_03_220755) do
     t.string "phone"
     t.string "housing"
     t.boolean "children"
-    t.boolean "employment"
+    t.string "employment"
     t.string "work_from_home"
     t.string "hours_unattended"
     t.string "experience"
