@@ -141,7 +141,55 @@ a.kitten-link {
   grid-template-columns: 1fr 2fr;
   background-color: #fff;
   padding: 20px;
-  margin: auto;
+  margin: 30px 100px;
+}
+
+.kitten-grid > div {
+  padding: 10px 30px;
+  margin: 0px 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+}
+
+.kitten-img {
+  object-fit: cover;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.kitten-title {
+  grid-column: span 2;
+  font-size: 20px;
+  text-align: left; 
+}
+
+.kitten-title > h4 {
+  margin: 5px;
+  padding: 0px;
+}
+
+.kitten-info {
+  font-size: 18px;
+  text-align: left;
+  padding: 0px 20px;
+  margin: 0px;
+  line-height: 150%;
+}
+
+@media screen and (max-width:650px){
+  .kitten-title {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .sub-grid {
+    grid-column: 1;
+  }
 }
 
   /* CARDS */

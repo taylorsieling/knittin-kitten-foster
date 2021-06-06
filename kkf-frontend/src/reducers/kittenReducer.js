@@ -1,4 +1,4 @@
-const kittens = (state = { kittens: [], kitten: null, loading: false}, action) => {
+const kittens = (state = { kittens: [], setKitten: null, loading: false}, action) => {
     switch(action.type){
         case "LOADING_KITTENS":
             return {
@@ -21,18 +21,6 @@ const kittens = (state = { kittens: [], kitten: null, loading: false}, action) =
                 ...state,
                 kittens: [...state.kittens, action.payload],
                 loading: false
-            }
-        case "SETTING_KITTEN":
-            return {
-                ...state, 
-                kitten: { ...state.kitten }, 
-                loading: true 
-            }
-        case "KITTEN_SET":
-            return {
-                ...state, 
-                kitten: action.payload,
-                loading: false,
             }
         default:
             return state

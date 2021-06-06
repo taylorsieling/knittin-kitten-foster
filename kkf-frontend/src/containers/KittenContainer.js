@@ -1,41 +1,43 @@
 import React, { Component } from 'react'
+import { fetchKittens } from '../actions/kittens'
 import { connect } from 'react-redux'
-import { setKitten } from '../actions/kittens'
 import KittenShow from '../components/KittenShow'
 
 class KittenContainer extends Component {
 
     componentDidMount() {
-        const kittenID = parseInt(this.props.match.params.id)
-        this.props.setKitten(kittenID)
-    }
+        this.props.fetchKittens();
+   }
 
     handleLoading = () => {
         if (this.props.loading) {
             return (
                 <div>
                     <div className="kittens">
-                    <div className="home-text">
-                        <h1>Knittin' Kitten Foster</h1>
+                        <div className="home-text">
+                            <h1>Knittin' Kitten Foster</h1>
+                        </div>
                     </div>
+                    <div><h2>Grabbing the precious baby... one moment please!</h2></div>
                 </div>
-                <div><h2>Grabbing the precious baby... one moment please!</h2></div>
-            </div>
             )
         } else {
-            console.log('kitten loaded', this.props.kitten)
+            const kitten = this.props.kittens.find(kit => kit.id === parseInt(this.props.match.params.id))
             return (
-                <div>
-                    <h1>Kitten Container</h1>
-                    <KittenShow id={this.props.match.params.id} kitten={this.props.kitten}/>
+                <>
+                <div className="kittens">
+                    <div className="home-text">
+                        <h1>{kitten.name}</h1>
+                    </div>
                 </div>
+                <KittenShow kitten={kitten}/>
+                </>
             )
         }
     }
     
 
     render() {
-        console.log('container render',this.props.kitten)
         return (
             <div>
                 {this.handleLoading()}
@@ -46,9 +48,9 @@ class KittenContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        kitten: state.kittenReducer.kitten,
+        kittens: state.kittenReducer.kittens,
         loading: state.kittenReducer.loading
     }
 }
 
-export default connect(mapStateToProps, { setKitten })(KittenContainer)
+export default connect(mapStateToProps, { fetchKittens })(KittenContainer)

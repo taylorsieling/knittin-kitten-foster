@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import Kitten from '../components/Kitten'
-import { connect } from 'react-redux'
 import { fetchKittens } from '../actions/kittens'
+import { connect } from 'react-redux'
+import Kitten from '../components/Kitten'
+
+
 
 class Kittens extends Component {
 
