@@ -47,38 +47,3 @@ rosie = Kitten.create({
     description: "Two-week old kitten",
     portrait_url: "https://i.imgur.com/h2jxzUI.jpg"
 })
-
-jessica = Application.create({
-    first_name: "Jessica",
-    last_name: "Sieling",
-    email: "itsjess@gmail.com",
-    phone: "281-614-8018",
-    housing: "Rent",
-    children: FALSE,
-    employment: "Full-time",
-    work_from_home: "Part-time",
-    hours_unattended: "4",
-    experience: "I have fostered two bottle babies from 2 weeks - 4 weeks.",
-    kitten_type: "All",
-    give_medication: TRUE,
-    provide_food: TRUE,
-    current_pets: "Two adult cats"
-})
-
-tammy = Application.create({
-    first_name: "Tammy",
-    last_name: "Sellers",
-    email: "mimisellers@gmail.com",
-    phone: "281-455-1604",
-    housing: "Own",
-    children: FALSE,
-    employment: "Full-time",
-    work_from_home: "Never",
-    hours_unattended: "8",
-    experience: "No previous foster experience",
-    kitten_type: "Weened kittens",
-    give_medication: TRUE,
-    provide_food: TRUE,
-    current_pets: "One adult cat"
-})
-
