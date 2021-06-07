@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { fetchKittens } from '../actions/kittens'
+import { fetchKittens, deleteKitten } from '../actions/kittens'
 import { connect } from 'react-redux'
 import KittenShow from '../components/KittenShow'
 
@@ -7,6 +7,12 @@ class KittenContainer extends Component {
 
     componentDidMount() {
         this.props.fetchKittens();
+   }
+
+   handleDelete = event => {
+       console.log('in delete')
+       debugger
+       this.props.deleteKitten(event.target.id)
    }
 
     handleLoading = () => {
@@ -30,7 +36,7 @@ class KittenContainer extends Component {
                         <h1>{kitten.name}</h1>
                     </div>
                 </div>
-                <KittenShow kitten={kitten}/>
+                <KittenShow kitten={kitten} delete={this.handleDelete}/>
                 </>
             )
         }
@@ -53,4 +59,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchKittens })(KittenContainer)
+export default connect(mapStateToProps, { fetchKittens, deleteKitten })(KittenContainer)

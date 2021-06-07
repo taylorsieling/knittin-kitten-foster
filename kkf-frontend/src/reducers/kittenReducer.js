@@ -22,6 +22,17 @@ const kittens = (state = { kittens: [], setKitten: null, loading: false}, action
                 kittens: [...state.kittens, action.payload],
                 loading: false
             }
+        case "DELETING_KITTEN":
+            return {
+                ...state,
+                loading: true
+            }
+        case "KITTEN_DELETED":
+            return {
+                ...state,
+                kittens: [...state.kittens.filter(kitten => kitten.id !== action.payload)],
+                loading: false
+            }
         default:
             return state
     }

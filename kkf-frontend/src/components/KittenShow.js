@@ -1,6 +1,6 @@
 import React from 'react'
 
-const KittenShow = ({kitten}) => {
+const KittenShow = ({kitten}, props) => {
     
     return (
         <div>
@@ -53,8 +53,21 @@ const KittenShow = ({kitten}) => {
                     </div>
                     <div className="kitten-info">
                         <p>
-                            <strong>Description: </strong>{kitten.description} <br/>                    </p>
+                            <strong>Description: </strong>{kitten.description}                   
+                        </p>
                     </div>
+
+                    <div className="kitten-info">
+                        <p>
+                            <button>EDIT</button>
+                        </p>
+                    </div>
+                    <div className="kitten-info">
+                        <p>
+                            <button value={kitten.id} onClick={props.delete}>DELETE</button>                   
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>

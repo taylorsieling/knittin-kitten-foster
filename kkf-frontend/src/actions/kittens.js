@@ -38,3 +38,21 @@ export const addKitten = (kitten) => {
         })
     }
 }
+
+export const deleteKitten = (id) => {
+    return (dispatch) => {
+        dispatch({ type: "DELETING_KITTEN "})
+        let configObj = {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+        fetch(`http://localhost:3001/kittens/${id}`, configObj)
+        .then(() => dispatch({
+            type: "KITTEN_DELETED",
+            payload: id
+        }))
+    }
+}
+
