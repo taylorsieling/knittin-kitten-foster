@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { fetchKittens } from '../actions/kittens'
 import { connect } from 'react-redux'
-import Kitten from '../components/Kitten'
+import KittenCard from '../components/KittenCard'
 
 
 
@@ -35,7 +35,7 @@ class Kittens extends Component {
                     <div className="wrapper">
                         {this.props.kittens.map((kitten => {
                         return (
-                        <Kitten key={kitten.id} kitten={kitten} />
+                        <KittenCard key={kitten.id} kitten={kitten} />
                         )}
                         ))}
                     </div>

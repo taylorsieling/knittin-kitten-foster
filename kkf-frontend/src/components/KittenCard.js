@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom' 
 import '../index.css'
 
-const Kitten = ({kitten}) => {
+const KittenCard = ({kitten}) => {
     return (
         <div className="card">
            <div className="card-header">
@@ -22,4 +22,4 @@ const Kitten = ({kitten}) => {
     )
 }
 
-export default Kitten;
+export default KittenCard;
