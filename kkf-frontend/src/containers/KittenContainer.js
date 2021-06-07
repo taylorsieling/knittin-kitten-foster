@@ -11,8 +11,7 @@ class KittenContainer extends Component {
 
    handleDelete = event => {
        console.log('in delete')
-       debugger
-       this.props.deleteKitten(event.target.id)
+    //    this.props.deleteKitten(event.target.id)
    }
 
     handleLoading = () => {
@@ -36,7 +35,7 @@ class KittenContainer extends Component {
                         <h1>{kitten.name}</h1>
                     </div>
                 </div>
-                <KittenShow kitten={kitten} delete={this.handleDelete}/>
+                <KittenShow kitten={kitten} handleDeleteClick={this.handleDelete}/>
                 </>
             )
         }

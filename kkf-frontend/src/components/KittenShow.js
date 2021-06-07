@@ -1,6 +1,8 @@
 import React from 'react'
 
-const KittenShow = ({kitten}, props) => {
+const KittenShow = (props) => {
+
+    const kitten = props.kitten
     
     return (
         <div>
@@ -64,7 +66,7 @@ const KittenShow = ({kitten}, props) => {
                     </div>
                     <div className="kitten-info">
                         <p>
-                            <button value={kitten.id} onClick={props.delete}>DELETE</button>                   
+                            <button value={kitten.id} onClick={props.handleDeleteClick}>DELETE</button>                   
                         </p>
                     </div>
 
