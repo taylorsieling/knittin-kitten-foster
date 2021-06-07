@@ -7,12 +7,14 @@ class KittenContainer extends Component {
 
     componentDidMount() {
         this.props.fetchKittens();
-   }
+    }
 
    handleDelete = event => {
-       console.log('in delete')
-    //    this.props.deleteKitten(event.target.id)
-   }
+       const onSuccess = () => {
+           this.props.history.push('/kittens')
+       }
+       this.props.deleteKitten(event.target.id, onSuccess)
+    }
 
     handleLoading = () => {
         if (this.props.loading) {

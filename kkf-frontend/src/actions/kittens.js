@@ -39,7 +39,8 @@ export const addKitten = (kitten) => {
     }
 }
 
-export const deleteKitten = (id) => {
+export const deleteKitten = (id, onSuccess) => {
+    console.log(id)
     return (dispatch) => {
         dispatch({ type: "DELETING_KITTEN "})
         let configObj = {
@@ -53,6 +54,7 @@ export const deleteKitten = (id) => {
             type: "KITTEN_DELETED",
             payload: id
         }))
+        .then(onSuccess)
     }
 }
 

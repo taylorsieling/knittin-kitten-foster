@@ -66,7 +66,7 @@ const KittenShow = (props) => {
                     </div>
                     <div className="kitten-info">
                         <p>
-                            <button value={kitten.id} onClick={props.handleDeleteClick}>DELETE</button>                   
+                            <button id={kitten.id} onClick={props.handleDeleteClick}>DELETE</button>                   
                         </p>
                     </div>
 

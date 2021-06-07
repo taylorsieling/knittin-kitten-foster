@@ -105,9 +105,9 @@ class IntakeForm extends Component {
                     <div>
                         <div>
                             <label>Sex: </label> <br/> <br/>
-                            <input className="radio" type="radio" id="male" name="sex" value="male" checked={this.state.sex === "male"} onChange={this.handleChange}/> &nbsp;
+                            <input className="radio" type="radio" id="male" name="sex" value="Male" checked={this.state.sex === "Male"} onChange={this.handleChange}/> &nbsp;
                             <label htmlFor="male">Male</label> &nbsp;
-                            <input className="radio" type="radio" id="female" name="sex" value="female" checked={this.state.sex === "female"} onChange={this.handleChange}/> &nbsp;
+                            <input className="radio" type="radio" id="female" name="sex" value="Female" checked={this.state.sex === "Female"} onChange={this.handleChange}/> &nbsp;
                             <label htmlFor="female">Female</label>
                         </div>
                     </div>
@@ -175,9 +175,9 @@ class IntakeForm extends Component {
                         <label>Intake Type: </label>
                         <select className="select" name='intake_type' onChange={this.handleChange} value={this.state.intake_type}>
                             <option defaultValue value=''>Choose Type</option>
-                            <option value='stray'>Stray</option>
-                            <option value='surrender'>Surrender</option>
-                            <option value='tnr'>TNR</option>
+                            <option value='Stray'>Stray</option>
+                            <option value='Surrender'>Surrender</option>
+                            <option value='TNR'>TNR</option>
                         </select>
                     </div>
 
@@ -192,10 +192,10 @@ class IntakeForm extends Component {
                         <label>Adoption Status: </label><br/>
                         <select className="select" name='status' onChange={this.handleChange} value={this.state.status}>
                             <option defaultValue value=''>Choose Status</option>
-                            <option value='unavailable'>Unavailable</option>
-                            <option value='pre_adoption'>Pre-Adoption</option>
-                            <option value='available'>Available</option>
-                            <option value='adopted'>Adopted</option>
+                            <option value='Unavailable'>Unavailable</option>
+                            <option value='Pre_Adoption'>Pre-Adoption</option>
+                            <option value='Available'>Available</option>
+                            <option value='Adopted'>Adopted</option>
                         </select>
                     </div>
 
@@ -203,10 +203,10 @@ class IntakeForm extends Component {
                         <label>Current Location: </label>
                         <select className="select" name='current_location' onChange={this.handleChange} value={this.state.current_location}>
                             <option defaultValue value=''>Choose Location</option>
-                            <option value='foster_home'>Foster Home</option>
-                            <option value='shelter_rescue'>Shelter/Rescue</option>
-                            <option value='vet'>Vet's Office</option>
-                            <option value='forever_home'>Forever Home</option>
+                            <option value='Foster-Home'>Foster Home</option>
+                            <option value='Shelter'>Shelter/Rescue</option>
+                            <option value='Vet'>Vet's Office</option>
+                            <option value='Forever-Home'>Forever Home</option>
                         </select>
                     </div>
 
