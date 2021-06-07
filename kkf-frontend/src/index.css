@@ -39,11 +39,17 @@ h1 {
 
 p {
   font-weight: 200;
+  font-size: 18px;
   color: #727375;
 }
 
-li {
-
+hr {
+  text-align: center;
+  width: 30%;
+  height: 1px;
+  color: black;
+  border: none;
+  background-color: black;
 }
 
 a:link, a:visited {
@@ -88,9 +94,6 @@ a.kitten-link {
   margin: 0;
   color: #fff;
   align-items: center;
-}
-
-.home .intake > h1 {
   text-shadow: 1px 1px #eeeeee;
 }
 
@@ -117,6 +120,11 @@ a.kitten-link {
   width: 100%;
 }
 
+.main {
+  margin: 30px 150px;
+  padding: 30px;
+}
+
 .hero-img {
   margin: 10px;
   width: 400px;
@@ -126,7 +134,8 @@ a.kitten-link {
 
 .card-title {
   text-align: center;
-  color: #727375;
+  font-weight: 400;
+  color: black;
   display: flow-root;
   margin: 0px 0px 10px 10px;
   padding: 10px;

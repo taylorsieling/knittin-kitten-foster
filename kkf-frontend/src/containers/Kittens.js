@@ -18,9 +18,7 @@ class Kittens extends Component {
                 <div>
                     <div className="kittens">
                     <div className="home-text">
-                        <h2>Give a Kitten a Forever Home</h2>
-                        <h1>Knittin' Kitten Foster</h1>
-                        <p><a href="https://orphankittenclub.org/donate/">Donate</a></p>
+                        <h1>Our Current Kittens</h1>
                     </div>
                 </div>
                 <div><h2>Herding the kittens... one moment please!</h2></div>
@@ -31,13 +29,9 @@ class Kittens extends Component {
                 <>
                     <div className="kittens">
                         <div className="home-text">
-                            <h2>Give a Kitten a Forever Home</h2>
-                            <h1>Knittin' Kitten Foster</h1>
-                            <p><a href="https://orphankittenclub.org/donate/">Donate</a></p>
+                            <h1>Our Current Kittens</h1>
                         </div>
                     </div>
-
-                    <h2>Our Current Kittens</h2>
                     <div className="wrapper">
                         {this.props.kittens.map((kitten => {
                         return (
