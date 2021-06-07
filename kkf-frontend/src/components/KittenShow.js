@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const KittenShow = (props) => {
 
@@ -61,7 +62,7 @@ const KittenShow = (props) => {
 
                     <div className="kitten-info">
                         <p>
-                            <button>EDIT</button>
+                            <Link to={`/kittens/${kitten.id}/edit`} className="edit-btn">EDIT</Link>
                         </p>
                     </div>
                     <div className="kitten-info">

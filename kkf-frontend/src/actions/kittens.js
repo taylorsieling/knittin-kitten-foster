@@ -58,3 +58,22 @@ export const deleteKitten = (id, onSuccess) => {
     }
 }
 
+export const editKitten = (id, data, onSuccessfulEdit) => {
+    return dispatch => {
+        dispatch({ type: 'EDITING_KITTEN' })
+        fetch(`http://localhost:3001/kittens/${id}`, {
+            method: "PATCH",
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(res => res.json())
+            .then(kitten => dispatch({
+                type: 'KITTEN_EDITED', 
+                payload: kitten 
+            }))
+            .then(onSuccessfulEdit)
+    }
+}
+

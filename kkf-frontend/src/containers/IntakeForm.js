@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addKitten } from '../actions/kittens'
+import { addKitten, editKitten } from '../actions/kittens'
 
 class IntakeForm extends Component {
 
@@ -231,4 +231,4 @@ class IntakeForm extends Component {
     }
 }
 
-export default connect(null, { addKitten } )(IntakeForm)
+export default connect(null, { addKitten, editKitten } )(IntakeForm)

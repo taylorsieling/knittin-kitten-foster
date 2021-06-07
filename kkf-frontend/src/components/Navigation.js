@@ -51,21 +51,7 @@ const Navigation = () => {
             INTAKE
             </NavLink>
 
-            <NavLink
-                to="/applications"
-                exact
-                style={navbar}
-                activeStyle={{
-                    textdecoration: 'underline',
-                    fontWeight: 'bold',
-                    color: '#C4dcdf'
-                }}
-            >
-            APPLICATIONS
-            </NavLink>
-
         </div>
-
         
     )
 }

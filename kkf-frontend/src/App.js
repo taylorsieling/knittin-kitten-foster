@@ -26,11 +26,9 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={ Home }/>
             <Route exact path='/kittens' component={ Kittens }/>
-            <Route path='/kittens/:id' component={ KittenContainer }/>
             <Route exact path='/intake' component={ IntakeForm }/>
-            <Route exact path='/applications' component={ Applications }/>
-            <Route path='/applications/:id' component={ ApplicationContainer }/>
-            <Route exact path='/apply' component={ApplicationForm}/>
+            <Route path='/kittens/:id' component={ KittenContainer }/>
+            <Route path='/kittens/:id/edit' component={ IntakeForm }/>
           </Switch>
 
         <div className="footer">

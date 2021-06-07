@@ -33,6 +33,17 @@ const kittens = (state = { kittens: [], setKitten: null, loading: false}, action
                 kittens: [...state.kittens.filter(kitten => kitten.id !== action.payload)],
                 loading: false
             }
+        case "EDITING_KITTEN":
+            return {
+                ...state,
+                loading: true
+            }
+        case "KITTEN_EDITED":
+            return {
+                ...state,
+                kittens: [...state.kittens, action.payload],
+                loading:false
+            }
         default:
             return state
     }
