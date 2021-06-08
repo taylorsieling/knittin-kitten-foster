@@ -6,7 +6,9 @@ const KittenCard = ({kitten}) => {
     return (
         <div className="card">
            <div className="card-header">
-            <Link className="kitten-link" key={kitten.id} to={`/kittens/${kitten.id}`}><img className="cardimg" src={kitten.portrait_url} alt={kitten.name} width="100"/></Link>
+            <Link className="kitten-link" key={kitten.id} to={`/kittens/${kitten.id}`}>
+                <img className="cardimg" src={kitten.portrait_url} alt={kitten.name} width="100"/>
+            </Link>
             </div>
             <div className="card-body">
                 <p className="kitten-status">{kitten.status}</p>
