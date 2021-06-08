@@ -1,45 +1,20 @@
 import React, { Component } from 'react'
-import { fetchKittens } from '../actions/kittens'
 import { connect } from 'react-redux'
 import KittenCard from '../components/KittenCard'
 
 
-
 class Kittens extends Component {
-
-    componentDidMount(){
-        console.log("componentDidMount")
-        this.props.fetchKittens()
-    }
 
     handleLoading = () => {
         if (this.props.loading) {
-            return (
-                <div>
-                    <div className="kittens">
-                    <div className="home-text">
-                        <h1>Our Current Kittens</h1>
-                    </div>
-                </div>
-                <div><h2>Herding the kittens... one moment please!</h2></div>
-            </div>
-            )
+            return ( <div><h2>Herding the kittens... one moment please!</h2></div> )
         } else {
             return (
-                <>
-                    <div className="kittens">
-                        <div className="home-text">
-                            <h1>Our Current Kittens</h1>
-                        </div>
-                    </div>
-                    <div className="wrapper">
-                        {this.props.kittens.map((kitten => {
-                        return (
-                        <KittenCard key={kitten.id} kitten={kitten} />
-                        )}
-                        ))}
-                    </div>
-                </>
+                <div className="wrapper">
+                    {this.props.kittens.map((kitten => {
+                        return ( <KittenCard key={kitten.id} kitten={kitten} /> )}
+                    ))}
+                </div>
             )
         }
     }
@@ -47,7 +22,12 @@ class Kittens extends Component {
     render() {
         return (
             <div>
-                {this.handleLoading()}
+                <div className="kittens">
+                    <h1>Our Current Kittens</h1>
+                </div>
+                <div>
+                    {this.handleLoading()}
+                </div>
             </div>
         )
     }
@@ -60,4 +40,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { fetchKittens })(Kittens)
+export default connect(mapStateToProps)(Kittens)

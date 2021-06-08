@@ -8,9 +8,16 @@ import { Footer } from './components/Footer'
 import Kittens from './containers/Kittens'
 import KittenContainer from './containers/KittenContainer'
 import IntakeForm from './containers/IntakeForm'
-import './App.css';
+import EditForm from './containers/EditForm'
+import { fetchKittens } from './actions/kittens'
 
 class App extends Component {
+
+  componentDidMount(){
+    console.log(" app componentDidMount")
+    this.props.fetchKittens()
+  }
+
   render() {
     return (
 
@@ -23,6 +30,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={ Home }/>
             <Route exact path='/kittens' component={ Kittens }/>
+            <Route path='/kittens/:id/edit' component={ EditForm }/>
             <Route path='/kittens/:id' component={ KittenContainer }/>
             <Route exact path='/intake' component={ IntakeForm }/>
           </Switch>
@@ -37,12 +45,10 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     state
-    // kittens: state.kittenReducer.kittens,
-    // loading: state.kittenReducer.loading
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { fetchKittens })(App);

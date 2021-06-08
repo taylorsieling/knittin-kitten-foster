@@ -1,4 +1,4 @@
-const kittens = (state = { kittens: [], setKitten: null, loading: false}, action) => {
+const kittens = (state = { kittens: [], loading: false}, action) => {
     switch(action.type){
         case "LOADING_KITTENS":
             return {
@@ -31,6 +31,17 @@ const kittens = (state = { kittens: [], setKitten: null, loading: false}, action
             return {
                 ...state,
                 kittens: [...state.kittens.filter(kitten => kitten.id !== action.payload)],
+                loading: false
+            }
+        case "EDITING_KITTEN":
+            return {
+                ...state,
+                loading: true
+            }
+        case "KITTEN_EDITED":
+            return {
+                ...state,
+                kittens: [...state.kittens, action.payload],
                 loading: false
             }
         default:

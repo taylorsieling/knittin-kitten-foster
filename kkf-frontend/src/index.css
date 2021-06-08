@@ -71,12 +71,28 @@ a:hover, a:active {
 }
 
 a.kitten-link {
+  margin: 0;
+  padding: 0;
   color: black;
   text-decoration: none;
   font-family: inherit;
   font-size: 14px;
   font-weight: normal;
   text-align: center;
+}
+
+a.button {
+  width: 100%;
+  padding: 12px 50px;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+  outline: none;
+  font-family: 'Source Sans Pro', 'Veranda', sans-serif;
+  font-size: 16px;
 }
 
 

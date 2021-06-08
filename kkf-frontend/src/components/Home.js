@@ -25,7 +25,7 @@ const Home = () => {
                         <img className="cardimg" src="https://images.unsplash.com/photo-1597626133612-d9977d3eec18?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Brown Tabby Kitten" width="100"/>
                     </div>
                     <div className="card-title">
-                        <p><hr/></p>
+                        <hr/>
                         <h3>Rescue & Fostering</h3>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Home = () => {
                         <img className="cardimg" src="https://images.unsplash.com/photo-1597626291233-73dfa25093eb?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDF8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Calico Kitten" width="100"/>
                     </div>
                     <div className="card-title">
-                        <p><hr/></p>
+                        <hr/>
                         <h3>Education & Outreach</h3>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const Home = () => {
                         <img className="cardimg" src="https://images.unsplash.com/photo-1587996833651-06a23343b15d?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDN8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Orange Tabby Kitten" width="100"/>
                     </div>
                     <div className="card-title">
-                        <p><hr/></p>
+                        <hr/>
                         <h3>Adoption & Forever Homes</h3>
                     </div>
                 </div>
