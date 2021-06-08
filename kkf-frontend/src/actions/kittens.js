@@ -61,24 +61,23 @@ export const deleteKitten = (id, onSuccess) => {
 export const editKitten = (kitten) => {
 
     return (dispatch) => {
-        dispatch({ type: "ADDING_KITTEN "})
+        dispatch({ type: "EDITING_KITTEN "})
         let configObj = {
-            method: 'POST',
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(kitten)
         }
 
-        fetch('http://localhost:3001/kittens', configObj)
+        fetch(`http://localhost:3001/kittens/${kitten.id}`, configObj)
         .then(res => res.json())
         .then(kitten => {
-            console.log('adding kitten')
+            console.log('editing kitten')
             dispatch({
-            type: "KITTEN_ADDED",
+            type: "KITTEN_EDITED",
             payload: kitten
         })
         })
     }
 }
-

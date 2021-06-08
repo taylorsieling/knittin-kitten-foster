@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import KittenForm from '../components/KittenShow'
 import { editKitten } from '../actions/kittens'
+import KittenForm from '../components/KittenForm'
+
 
 class EditForm extends Component {
 
@@ -33,7 +34,7 @@ class EditForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        console.log(this.state)
+        console.log('edit form', this.state)
         const kitten = {
             name: this.state.name,
             sex: this.state.sex,
@@ -78,20 +79,24 @@ class EditForm extends Component {
     }
 
     render() {
-        console.log('edit form', this.state)
+        console.log('in edit form render')
         const kitten = this.props.kittens.find(kitten => kitten.id === parseInt(this.props.match.params.id))
+        console.log('render', kitten)
         return (
-            <> 
-            <h1>Edit Form Component</h1>
-            <KittenForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} kitten={kitten} button='UPDATE' />
-            </>
+            <div> 
+                <div className="intake">
+                    <h1>Update Kitten Form</h1>
+                </div>
+                <KittenForm kitten={kitten} handleChange={this.handleChange} handleSubmit={this.handleSubmit} button='UPDATE'/>
+            </div>
         )
     }
 }
 
 const mapStateToProps = state => {
     return {
-        kittens: state.kittenReducer.kittens
+        kittens: state.kittenReducer.kittens,
+        loading: state.kittenReducer.loading
     }
 }
 

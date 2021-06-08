@@ -59,9 +59,9 @@ const KittenForm = props => {
                     <div>
                         <div className="label">
                             <label>Altered: </label> &nbsp; &nbsp;
-                            <input className="radio" type="radio" id="yes" name="altered" value="yes" checked={kitten.altered === "yes"} onChange={props.handleChange}/> &nbsp;
+                            <input className="radio" type="radio" id="yes" name="altered" value="Yes" checked={kitten.altered === "Yes"} onChange={props.handleChange}/> &nbsp;
                             <label htmlFor="yes">Yes</label> &nbsp;
-                            <input className="radio" type="radio" id="no" name="altered" value="no" checked={kitten.altered === "no"} onChange={props.handleChange}/> &nbsp;
+                            <input className="radio" type="radio" id="no" name="altered" value="No" checked={kitten.altered === "No"} onChange={props.handleChange}/> &nbsp;
                             <label htmlFor="no">No</label>
                         </div>
                     </div> 
@@ -71,9 +71,9 @@ const KittenForm = props => {
                     <div>
                         <div className="label" >
                             <label>Microchipped: </label> &nbsp; &nbsp;
-                            <input className="radio" type="radio" id="yes" value="yes" name="microchipped" checked={kitten.microchipped === "yes"} onChange={props.handleChange}/> &nbsp;
+                            <input className="radio" type="radio" id="yes" value="Yes" name="microchipped" checked={kitten.microchipped === "Yes"} onChange={props.handleChange}/> &nbsp;
                             <label htmlFor="yes">Yes</label> &nbsp;
-                            <input className="radio" type="radio" id="no" value="no" name="microchipped" checked={kitten.microchipped === "no"} onChange={props.handleChange}/> &nbsp;
+                            <input className="radio" type="radio" id="no" value="No" name="microchipped" checked={kitten.microchipped === "No"} onChange={props.handleChange}/> &nbsp;
                             <label htmlFor="no">No</label>
                         </div>
                     </div> 
@@ -139,7 +139,7 @@ const KittenForm = props => {
                 </div>
 
                 <div>
-                    <input type="submit" name="Submit"/>
+                    <input type="submit" name="submit" value={props.button}/>
                 </div>
                 
             </div>
