@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const KittenShow = (props) => {
+const KittenShow = props => {
 
     const kitten = props.kitten
     console.log(props.kitten)

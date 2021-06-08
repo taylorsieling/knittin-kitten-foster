@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addKitten } from '../actions/kittens'
+import KittenForm from '../components/KittenForm'
 
 class IntakeForm extends Component {
 
@@ -78,155 +79,12 @@ class IntakeForm extends Component {
 
     render() {
         return (
-            <>
-            <div className="intake">
-                <div>
+            <div>
+                <div className="intake">
                     <h1>New Kitten Intake Form</h1>
                 </div>
+                <KittenForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} kitten={this.state} button='SUBMIT'/>
             </div>
-
-            
-                <form onSubmit={this.handleSubmit}>
-                <div className="form">
-                <div className="form-grid">
-                    
-                    <div className="grid-full"><h3>Kitten Description</h3></div>
-                    
-                    <div>
-                        <input className="input-txt" type="text" value={this.state.name} name="name" placeholder="Name" onChange={this.handleChange}/>
-                    </div>
-
-                    
-
-                    <div>
-                        <input type="text" value={this.state.age} name="age" placeholder="Age" onChange={this.handleChange}/>
-                    </div>
-
-                    <div>
-                        <div>
-                            <label>Sex: </label> <br/> <br/>
-                            <input className="radio" type="radio" id="male" name="sex" value="Male" checked={this.state.sex === "Male"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="male">Male</label> &nbsp;
-                            <input className="radio" type="radio" id="female" name="sex" value="Female" checked={this.state.sex === "Female"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="female">Female</label>
-                        </div>
-                    </div>
-
-                    <div className="label">
-                        <label>Date of Birth: </label>
-                        <input type="date" value={this.state.dob} name="dob" onChange={this.handleChange}/>
-                    </div>  
-
-                    <div>
-                        <input type="text" value={this.state.weight} name="weight" placeholder="Weight" onChange={this.handleChange}/>
-                    </div>   
-
-                    <div>
-                        <input type="text" value={this.state.breed} name="breed" placeholder="Breed" onChange={this.handleChange}/>
-                    </div> 
-
-                    <div>
-                        <input type="text" value={this.state.color} name="color" placeholder="Color" onChange={this.handleChange}/>
-                    </div>
-                   
-                    <div>
-                        <input type="text" value={this.state.pattern} name="pattern" placeholder="Pattern" onChange={this.handleChange}/>
-                    </div>
-
-                    <div className="grid-full"><h3>Medical Information</h3></div>
-
-                    <div>
-                        <div>
-                            <div className="label">
-                                <label>Altered: </label> &nbsp; &nbsp;
-                                <input className="radio" type="radio" id="yes" name="altered" value="yes" checked={this.state.altered === "yes"} onChange={this.handleChange}/> &nbsp;
-                                <label htmlFor="yes">Yes</label> &nbsp;
-                                <input className="radio" type="radio" id="no" name="altered" value="no" checked={this.state.altered === "no"} onChange={this.handleChange}/> &nbsp;
-                                <label htmlFor="no">No</label>
-                            </div>
-                        </div> 
-                    </div>
-
-                    <div>
-                        <div>
-                            <div className="label" >
-                                <label>Microchipped: </label> &nbsp; &nbsp;
-                                <input className="radio" type="radio" id="yes" value="yes" name="microchipped" checked={this.state.microchipped === "yes"} onChange={this.handleChange}/> &nbsp;
-                                <label htmlFor="yes">Yes</label> &nbsp;
-                                <input className="radio" type="radio" id="no" value="no" name="microchipped" checked={this.state.microchipped === "no"} onChange={this.handleChange}/> &nbsp;
-                                <label htmlFor="no">No</label>
-                            </div>
-                        </div> 
-                    </div>
-
-                    <div className="grid-full"><h3>Intake Information</h3></div>
-
-                    <div className="label">
-                            <label>Intake Date: </label><br/>
-                            <input type="date" value={this.state.intake_date} name="intake_date" onChange={this.handleChange}/>
-                    </div>
-
-                    <div className="label">
-                        <label>Intake Time: </label><br/>
-                        <input type="time" value={this.state.intake_time} name="intake_time" onChange={this.handleChange}/>
-                    </div>
-
-                    <div>
-                        <label>Intake Type: </label>
-                        <select className="select" name='intake_type' onChange={this.handleChange} value={this.state.intake_type}>
-                            <option defaultValue value=''>Choose Type</option>
-                            <option value='Stray'>Stray</option>
-                            <option value='Surrender'>Surrender</option>
-                            <option value='TNR'>TNR</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label>Location Found: </label>
-                        <input type="text" value={this.state.location_found} name="location_found" placeholder="Enter Address" onChange={this.handleChange}/>
-                    </div>
-
-                    <div className="grid-full"><h3>Adoption Information</h3></div>
-         
-                    <div>
-                        <label>Adoption Status: </label><br/>
-                        <select className="select" name='status' onChange={this.handleChange} value={this.state.status}>
-                            <option defaultValue value=''>Choose Status</option>
-                            <option value='Unavailable'>Unavailable</option>
-                            <option value='Pre_Adoption'>Pre-Adoption</option>
-                            <option value='Available'>Available</option>
-                            <option value='Adopted'>Adopted</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label>Current Location: </label>
-                        <select className="select" name='current_location' onChange={this.handleChange} value={this.state.current_location}>
-                            <option defaultValue value=''>Choose Location</option>
-                            <option value='Foster-Home'>Foster Home</option>
-                            <option value='Shelter'>Shelter/Rescue</option>
-                            <option value='Vet'>Vet's Office</option>
-                            <option value='Forever-Home'>Forever Home</option>
-                        </select>
-                    </div>
-
-                    <div className="grid-full">
-                        <input type="textarea" value={this.state.description} name="description" placeholder="Pet Description" onChange={this.handleChange}/>
-                    </div>
-
-                    <div>
-                        <input type="text" value={this.state.portrait_url} name="portrait_url" placeholder="Portrait URL" onChange={this.handleChange}/>
-                    </div>
-
-                    <div>
-                        <input type="submit" name="Submit"/>
-                    </div>
-                    
-                </div>
-            </div>
-            </form>
-            
-            </>
         )
     }
 }

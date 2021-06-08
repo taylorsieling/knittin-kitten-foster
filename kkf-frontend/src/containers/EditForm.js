@@ -74,7 +74,7 @@ class EditForm extends Component {
             current_location: '',
             description: '',
             portrait_url: ''
-         })
+        })
     }
 
     render() {
