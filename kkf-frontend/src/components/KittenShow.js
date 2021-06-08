@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 const KittenShow = (props) => {
 
     const kitten = props.kitten
-    
+    console.log(props.kitten)
+
     return (
         <div>
             <div className="kitten-grid">

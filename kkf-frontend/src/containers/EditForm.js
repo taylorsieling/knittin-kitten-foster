@@ -1,33 +1,3 @@
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import KittenForm from '../components/KittenForm'
-
-
-// class EditComponent extends Component {
-//     handleSubmit = (newTitle, newMessage) => {
-//         const data = {
-//             newTitle,
-//             newMessage
-//         }
-//         this.props.dispatch({ type: 'UPDATE', id: this.props.post.id, data: data })
-//     }
-
-//     render() {
-//         return (
-//         <div>
-//             <FormComponent
-//                 buttonLabel='Update'
-//                 handleSubmit={this.handleSubmit}
-//             />
-//         </div>
-//         );
-//     }
-// }
-// export default connect()(EditComponent);
-
-
-
-
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import KittenForm from '../components/KittenShow'
@@ -36,26 +6,24 @@ import { editKitten } from '../actions/kittens'
 class EditForm extends Component {
 
     state = { 
-        kitten: {
-            name: '',
-            sex: '',
-            age: '',
-            dob: '',
-            weight: '',
-            breed: '',
-            color: '',
-            pattern: '',
-            altered: '',
-            microchipped: '',
-            intake_date: '',
-            intake_time: '',
-            location_found: '',
-            intake_type: '',
-            status: '',
-            current_location: '',
-            description: '',
-            portrait_url: ''
-        }
+        name: '',
+        sex: '',
+        age: '',
+        dob: '',
+        weight: '',
+        breed: '',
+        color: '',
+        pattern: '',
+        altered: '',
+        microchipped: '',
+        intake_date: '',
+        intake_time: '',
+        location_found: '',
+        intake_type: '',
+        status: '',
+        current_location: '',
+        description: '',
+        portrait_url: ''
     }
 
     handleChange = event => {
@@ -88,34 +56,34 @@ class EditForm extends Component {
         }
         this.props.editKitten(kitten)
         this.setState({ 
-            kitten: {
-                name: '',
-                sex: '',
-                age: '',
-                dob: '',
-                weight: '',
-                breed: '',
-                color: '',
-                pattern: '',
-                altered: '',
-                microchipped: '',
-                intake_date: '',
-                intake_time: '',
-                location_found: '',
-                intake_type: '',
-                status: '',
-                current_location: '',
-                description: '',
-                portrait_url: ''
-            }
+            name: '',
+            sex: '',
+            age: '',
+            dob: '',
+            weight: '',
+            breed: '',
+            color: '',
+            pattern: '',
+            altered: '',
+            microchipped: '',
+            intake_date: '',
+            intake_time: '',
+            location_found: '',
+            intake_type: '',
+            status: '',
+            current_location: '',
+            description: '',
+            portrait_url: ''
          })
     }
 
     render() {
+        console.log('edit form', this.state)
+        const kitten = this.props.kittens.find(kitten => kitten.id === parseInt(this.props.match.params.id))
         return (
             <> 
             <h1>Edit Form Component</h1>
-            {/* <KittenForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} kitten={this.state} button='UPDATE' /> */}
+            <KittenForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} kitten={kitten} button='UPDATE' />
             </>
         )
     }
@@ -123,8 +91,8 @@ class EditForm extends Component {
 
 const mapStateToProps = state => {
     return {
-        kitten: state.kittenReducer.kitten
+        kittens: state.kittenReducer.kittens
     }
 }
 
-export default connect(mapStateToProps)(EditForm)
+export default connect(mapStateToProps, { editKitten })(EditForm)
