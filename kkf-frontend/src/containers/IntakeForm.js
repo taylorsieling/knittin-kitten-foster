@@ -54,7 +54,13 @@ class IntakeForm extends Component {
             description: this.state.description,
             portrait_url: this.state.portrait_url
         }
-        this.props.addKitten(kitten)
+       
+        const onSuccessfulSubmit = () => { 
+            this.props.history.push('/kittens')
+        }
+
+        this.props.addKitten(kitten, onSuccessfulSubmit)
+
         this.setState({ 
             name: '',
             sex: '',
@@ -76,6 +82,7 @@ class IntakeForm extends Component {
             portrait_url: ''
          })
     }
+    
 
     render() {
         return (

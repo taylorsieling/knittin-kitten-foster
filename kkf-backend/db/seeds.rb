@@ -18,13 +18,13 @@ poppy = Kitten.create({
     altered: FALSE,
     microchipped: FALSE,
     intake_date: "2021-05-24",
-    intake_time: "10:00:00",
+    intake_time: "12:00 PM",
     location_found: "2310 Sealy Ave, Galveston, TX 77550",
     intake_type: "Stray",
     status: "Unavailable",
     current_location: "Foster Home",
     description: "Two-week old kitten",
-    portrait_url: "https://i.imgur.com/3Cq854O.jpg"
+    portrait_url: "https://i.imgur.com/XZDJwC4.jpg?1"
 })
 
 rosie = Kitten.create({
@@ -39,11 +39,53 @@ rosie = Kitten.create({
     altered: FALSE,
     microchipped: FALSE,
     intake_date: "2021-05-24",
-    intake_time: "10:00:00",
+    intake_time: "12:00 PM",
     location_found: "2310 Sealy Ave, Galveston, TX 77550",
     intake_type: "Stray",
     status: "Unavailable",
     current_location: "Foster Home",
     description: "Two-week old kitten",
-    portrait_url: "https://i.imgur.com/h2jxzUI.jpg"
+    portrait_url: "https://i.imgur.com/fU70IZ0.jpg?1"
+})
+
+caleb = Kitten.create({
+    name: "Caleb",
+    sex: "Male",
+    age: "4 Weeks",
+    dob: "2021-04-26",
+    weight: "320 Grams",
+    breed: "Domestic Shorthair",
+    color: "Orange",
+    pattern: "Tabby",
+    altered: FALSE,
+    microchipped: FALSE,
+    intake_date: "2021-05-21",
+    intake_time: "12:00 PM",
+    location_found: "2310 Sealy Ave, Galveston, TX 77550",
+    intake_type: "Stray",
+    status: "Unavailable",
+    current_location: "Foster Home",
+    description: "Caleb is shy, but sweet.",
+    portrait_url: "https://i.imgur.com/utcnqZN.jpg?1"
+})
+
+jester = Kitten.create({
+    name: "Jester",
+    sex: "Female",
+    age: "4 Weeks",
+    dob: "2021-04-26",
+    weight: "362 Grams",
+    breed: "Domestic Shorthair",
+    color: "Grey",
+    pattern: "Tabby",
+    altered: FALSE,
+    microchipped: FALSE,
+    intake_date: "2021-05-21",
+    intake_time: "12:00 PM",
+    location_found: "2310 Sealy Ave, Galveston, TX 77550",
+    intake_type: "Stray",
+    status: "Unavailable",
+    current_location: "Foster Home",
+    description: "Jester is energetic and playful.",
+    portrait_url: "https://i.imgur.com/HCQ12I1.jpg?1"
 })

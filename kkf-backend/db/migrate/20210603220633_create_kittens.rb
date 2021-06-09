@@ -12,7 +12,7 @@ class CreateKittens < ActiveRecord::Migration[6.1]
       t.boolean "altered"
       t.boolean "microchipped"
       t.date "intake_date"
-      t.time "intake_time"
+      t.string "intake_time"
       t.string "location_found"
       t.string "intake_type"
       t.string "status"

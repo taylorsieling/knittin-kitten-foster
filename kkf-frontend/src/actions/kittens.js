@@ -15,7 +15,7 @@ export const fetchKittens = () => {
     
 }
 
-export const addKitten = (kitten) => {
+export const addKitten = (kitten, onSuccessfulSubmit) => {
 
     return (dispatch) => {
         dispatch({ type: "ADDING_KITTEN "})
@@ -36,10 +36,11 @@ export const addKitten = (kitten) => {
             payload: kitten
         })
         })
+        .then(onSuccessfulSubmit)
     }
 }
 
-export const deleteKitten = (id, onSuccess) => {
+export const deleteKitten = (id) => {
     console.log(id)
     return (dispatch) => {
         dispatch({ type: "DELETING_KITTEN "})
@@ -49,16 +50,16 @@ export const deleteKitten = (id, onSuccess) => {
                 'Content-Type': 'application/json'
             }
         }
+        debugger
         fetch(`http://localhost:3001/kittens/${id}`, configObj)
         .then(() => dispatch({
             type: "KITTEN_DELETED",
             payload: id
         }))
-        .then(onSuccess)
     }
 }
 
-export const editKitten = (kitten) => {
+export const editKitten = (id, kitten, onSuccessfulEdit) => {
 
     return (dispatch) => {
         dispatch({ type: "EDITING_KITTEN "})
@@ -70,7 +71,7 @@ export const editKitten = (kitten) => {
             body: JSON.stringify(kitten)
         }
 
-        fetch(`http://localhost:3001/kittens/${kitten.id}`, configObj)
+        fetch(`http://localhost:3001/kittens/${id}`, configObj)
         .then(res => res.json())
         .then(kitten => {
             console.log('editing kitten')
@@ -79,5 +80,6 @@ export const editKitten = (kitten) => {
             payload: kitten
         })
         })
+        .then(onSuccessfulEdit)
     }
 }

@@ -19,8 +19,8 @@ const KittenShow = props => {
                             <strong>Date of Birth: </strong>{kitten.dob} <br/>
                             <strong>Age: </strong>{kitten.age} <br/>
                             <strong>Weight: </strong>{kitten.weight}<br/>
-                            <strong>Altered: </strong>{kitten.altered}<br/>
-                            <strong>Microchipped: </strong>{kitten.microchipped}<br/>
+                            <strong>Altered: </strong>{kitten.altered.toString().toUpperCase()}<br/>
+                            <strong>Microchipped: </strong>{kitten.microchipped.toString().toUpperCase()}<br/>
                         </p>
                     </div>
                     <div className="kitten-info">

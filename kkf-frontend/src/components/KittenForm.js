@@ -13,13 +13,11 @@ const KittenForm = props => {
                 <div className="grid-full"><h3>Kitten Description</h3></div>
                 
                 <div>
-                    <input className="input-txt" type="text" value={kitten.name} name="name" placeholder="Name" onChange={props.handleChange}/>
+                    <input className="input-txt" type="text" value={kitten.name} name="name" placeholder="Name" onChange={props.handleChange} required/>
                 </div>
 
-                
-
                 <div>
-                    <input type="text" value={kitten.age} name="age" placeholder="Age" onChange={props.handleChange}/>
+                    <input type="text" value={kitten.age} name="age" placeholder="Age" onChange={props.handleChange} required/>
                 </div>
 
                 <div>
@@ -34,23 +32,23 @@ const KittenForm = props => {
 
                 <div className="label">
                     <label>Date of Birth: </label>
-                    <input type="date" value={kitten.dob} name="dob" onChange={props.handleChange}/>
+                    <input type="date" value={kitten.dob} name="dob" onChange={props.handleChange} required/>
                 </div>  
 
                 <div>
-                    <input type="text" value={kitten.weight} name="weight" placeholder="Weight" onChange={props.handleChange}/>
+                    <input type="text" value={kitten.weight} name="weight" placeholder="Weight" onChange={props.handleChange} required/>
                 </div>   
 
                 <div>
-                    <input type="text" value={kitten.breed} name="breed" placeholder="Breed" onChange={props.handleChange}/>
+                    <input type="text" value={kitten.breed} name="breed" placeholder="Breed" onChange={props.handleChange} required/>
                 </div> 
 
                 <div>
-                    <input type="text" value={kitten.color} name="color" placeholder="Color" onChange={props.handleChange}/>
+                    <input type="text" value={kitten.color} name="color" placeholder="Color" onChange={props.handleChange} required/>
                 </div>
                 
                 <div>
-                    <input type="text" value={kitten.pattern} name="pattern" placeholder="Pattern" onChange={props.handleChange}/>
+                    <input type="text" value={kitten.pattern} name="pattern" placeholder="Pattern" onChange={props.handleChange} required/>
                 </div>
 
                 <div className="grid-full"><h3>Medical Information</h3></div>
@@ -83,12 +81,38 @@ const KittenForm = props => {
 
                 <div className="label">
                         <label>Intake Date: </label><br/>
-                        <input type="date" value={kitten.intake_date} name="intake_date" onChange={props.handleChange}/>
+                        <input type="date" value={kitten.intake_date} name="intake_date" onChange={props.handleChange} required/>
                 </div>
 
-                <div className="label">
-                    <label>Intake Time: </label><br/>
-                    <input type="time" value={kitten.intake_time} name="intake_time" onChange={props.handleChange}/>
+                <div>
+                    <label>Intake Time: </label>
+                    <select className="select" name='intake_time' onChange={props.handleChange} value={kitten.intake_time}>
+                        <option defaultValue value=''>Choose Time</option>
+                        <option value='12:00AM'>12:00 AM</option>
+                        <option value='1:00AM'>1:00 AM</option>
+                        <option value='2:00AM'>2:00 AM</option>
+                        <option value='3:00AM'>3:00 AM</option>
+                        <option value='4:00AM'>4:00 AM</option>
+                        <option value='5:00AM'>5:00 AM</option>
+                        <option value='6:00AM'>6:00 AM</option>
+                        <option value='7:00AM'>7:00 AM</option>
+                        <option value='8:00AM'>8:00 AM</option>
+                        <option value='9:00AM'>9:00 AM</option>
+                        <option value='10:00AM'>10:00 AM</option>
+                        <option value='11:00AM'>11:00 AM</option>
+                        <option value='12:00PM'>12:00 PM</option>
+                        <option value='1:00PM'>1:00 PM</option>
+                        <option value='2:00PM'>2:00 PM</option>
+                        <option value='3:00PM'>3:00 PM</option>
+                        <option value='4:00PM'>4:00 PM</option>
+                        <option value='5:00PM'>5:00 PM</option>
+                        <option value='6:00PM'>6:00 PM</option>
+                        <option value='7:00PM'>7:00 PM</option>
+                        <option value='8:00PM'>8:00 PM</option>
+                        <option value='9:00PM'>9:00 PM</option>
+                        <option value='10:00PM'>10:00 PM</option>
+                        <option value='11:00PM'>11:00 PM</option>
+                    </select>
                 </div>
 
                 <div>
@@ -103,7 +127,7 @@ const KittenForm = props => {
 
                 <div>
                     <label>Location Found: </label>
-                    <input type="text" value={kitten.location_found} name="location_found" placeholder="Enter Address" onChange={props.handleChange}/>
+                    <input type="text" value={kitten.location_found} name="location_found" placeholder="Enter Address" onChange={props.handleChange} required/>
                 </div>
 
                 <div className="grid-full"><h3>Adoption Information</h3></div>
@@ -131,11 +155,11 @@ const KittenForm = props => {
                 </div>
 
                 <div className="grid-full">
-                    <input type="textarea" value={kitten.description} name="description" placeholder="Pet Description" onChange={props.handleChange}/>
+                    <input type="textarea" value={kitten.description} name="description" placeholder="Pet Description" onChange={props.handleChange} required/>
                 </div>
 
                 <div>
-                    <input type="text" value={kitten.portrait_url} name="portrait_url" placeholder="Portrait URL" onChange={props.handleChange}/>
+                    <input type="text" value={kitten.portrait_url} name="portrait_url" placeholder="Portrait URL" onChange={props.handleChange} required/>
                 </div>
 
                 <div>
