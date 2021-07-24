@@ -12,7 +12,7 @@ class Kittens extends Component {
             return (
                 <div className="wrapper">
                     {this.props.kittens.map((kitten => {
-                        return ( <KittenCard key={kitten.id} kitten={kitten} /> )}
+                        return ( <KittenCard key={kitten.id} kitten={kitten}/> )}
                     ))}
                 </div>
             )

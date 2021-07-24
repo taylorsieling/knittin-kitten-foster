@@ -1,15 +1,19 @@
 import React from 'react'
+import orangetabby from '../images/Orange-Tabby.png'
 
 const Home = () => {
     return (
         <div>
-
-            <div className="home">
-                <div>
-                    <h2>Saving the Tiniest Lives</h2>
-                    <h1>Knittin' Kitten Foster</h1>
+            <section id="header" className="manhattan">
+                <div className="columns">
+                    <div className="header-title">
+                        <h1>forever foster</h1>
+                        <h2>Giving you the tools to help keep your fosters safe, healthy, and most of all, loved.</h2>
+                        <p><a className="link-btn action" href="#">Get Started</a></p>
+                    </div>
+                    <img className="header-img" src={orangetabby} alt="floofy kitten"/>
                 </div>
-            </div>
+            </section>
 
             <div className="main">
                 <p>

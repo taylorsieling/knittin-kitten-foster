@@ -1,41 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro&display=swap');
 
-
-/* pistachio: #b7b578 */
-/* olive: #98b75e */
-/* powder: #cad9d2 */
-/* sunny #f5bb62 */
-/* flamingo: #f9b1a5 */
-/* peach: #f9d7bc */
-/* fossil: #727375 */
-
-* {
-  box-sizing: border-box;
-}
-
-body,
-html {
+body {
   overflow-x: hidden;
-  font-family: 'Source Sans Pro', 'Veranda', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-div {
+/* div {
   padding: 10px 0px 10px 0px;
   text-align: center;
-}
+} */
 
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Poppins', 'Veranda', sans-serif;
-}
-
-h1 {
-  font-family: 'Poppins', 'Veranda', sans-serif;
-  font-size: 52px;
-  margin: 0;
-}
 
 p {
   font-weight: 200;
@@ -50,24 +26,6 @@ hr {
   color: black;
   border: none;
   background-color: black;
-}
-
-a:link, a:visited {
-  margin: 4px;
-  padding: 6px 18px;
-  border: 2px solid white;
-  border-radius: 5px;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: normal;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background: none;
-}
-
-a:hover, a:active {
-  font-weight: bold;
 }
 
 a.kitten-link {

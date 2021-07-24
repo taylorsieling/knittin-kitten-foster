@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro&display=swap');
+
+:root {
+  --clr-primary-200: #f9edbe;
+  --clr-primary-400: #efc376;
+  --clr-primary-500: #ffb6a3;
+  --clr-primary-600: #e9845e;
+
+  --clr-accent-400: #a9d4cb;
+  --clr-accent-900: #20303c;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-200: #eff1f2;
+  --clr-neutral-600: #555555;
+  --clr-accent-700: #2a2a2a;
+
+  --clr-desert: #f1d0b8;
+  --clr-apple: #a64e43;
+
+  --clr-manhattan: #f4c1a6;
+  --clr-river: #4a5d66;
+
+  --ff-primary: 'Amaranth', sans-serif;
+  --ff-accent: 'Source Sans Pro', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-size: 1.2em;
+  font-family: var(--ff-accent);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-family: var(--ff-primary);
+  font-size: 4.6rem;
+  line-height: 1rem;
+  color: var(--clr-river);
+  text-shadow: white;
+}
+
+/* COMPONENTS */
+
+.manhattan {
+  color: var(--clr-river);
+  background-color: var(--clr-manhattan);
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin: 3rem 5rem;
+}
+
+.columns > * {
+  flex-basis: 100%;
+  padding: 0 2rem;
+}
+
+.header-title {
+  padding-left: 4rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 50%;
+}
+
+.header-img {
+  object-fit: scale-down;
+  height: 42rem;
+  width: 100%;
+}
+
+#header {
+   height: 35.5rem;
+}
+
+.action:link, .action:visited {
+  padding: 0.6em 4em;
+  background-color: var(--clr-river);
+  border: 2px solid var(--clr-river);
+  text-align: center;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.action:hover {
+  transition: all .2s ease-in-out;
+  transform: scale(1.2);
 }
