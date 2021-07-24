@@ -19,6 +19,7 @@
 
   --clr-manhattan: #f4c1a6;
   --clr-river: #4a5d66;
+  --clr-tana: #D3D6BB;
 
   --ff-primary: 'Amaranth', sans-serif;
   --ff-accent: 'Source Sans Pro', sans-serif;
@@ -41,15 +42,25 @@ h1 {
   text-shadow: white;
 }
 
-p {
-  line-height: 5rem;
-}
-
 /* COMPONENTS */
 
 .manhattan {
   color: var(--clr-river);
   background-color: var(--clr-manhattan);
+}
+
+.tana {
+  color: var(--clr-river);
+  background-color: var(--clr-tana);
+}
+
+.river {
+  color: var(--clr-tana);
+  background-color: var(--clr-river);
+}
+
+.line-height {
+  line-height: 5rem;
 }
 
 /* COMLUMNS */
@@ -70,7 +81,7 @@ p {
 /* NAVBAR */
 
 .navbar {
-  margin: 1rem;
+  padding: 1rem;
   text-align: center;
 }
 

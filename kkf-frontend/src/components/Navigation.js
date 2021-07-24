@@ -6,12 +6,12 @@ const navbar = {
     padding: '1rem',
     textDecoration: 'none',
     fontWeight: 'bold',
-    color: '#7b7167',
+    color: '#fff',
 }
 
 const Navigation = () => {
     return (
-        <div>
+        <div className="navbar">
             <NavLink
                 to="/"
                 exact
@@ -19,7 +19,7 @@ const Navigation = () => {
                 activeStyle={{
                     textdecoration: 'underline',
                     fontWeight: 'bold',
-                    color: '#bdd1c5'
+                    color: '#fff'
                 }}
             >
             HOME
@@ -32,7 +32,7 @@ const Navigation = () => {
                 activeStyle={{
                     textdecoration: 'underline',
                     fontWeight: 'bold',
-                    color: '#b6dee5'
+                    color: '#fff'
                 }}
             >
             KITTENS
@@ -45,7 +45,7 @@ const Navigation = () => {
                 activeStyle={{
                     textdecoration: 'underline',
                     fontWeight: 'bold',
-                    color: '#f9d7bc '
+                    color: '#fff'
                 }}
             >
             INTAKE
