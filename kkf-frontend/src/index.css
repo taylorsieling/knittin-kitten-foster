@@ -7,18 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* div {
-  padding: 10px 0px 10px 0px;
-  text-align: center;
-} */
-
-
-p {
-  font-weight: 200;
-  font-size: 18px;
-  color: #727375;
-}
-
 hr {
   text-align: center;
   width: 30%;
@@ -48,16 +36,6 @@ a.button {
   font-family: 'Source Sans Pro', 'Veranda', sans-serif;
   font-size: 16px;
   display: block;
-}
-
-
-#root {
-  padding: 0;
-  margin: 0;
-}
-
-.navbar {
-  text-align: center;
 }
 
 .home, .intake, .kittens, .applications {

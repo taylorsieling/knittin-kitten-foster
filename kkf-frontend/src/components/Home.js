@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div>
             <section id="header" className="manhattan">
-                <div className="columns">
+                <div className="equal-columns">
                     <div className="header-title">
                         <h1>forever foster</h1>
                         <h2>Giving you the tools to help keep your fosters safe, healthy, and most of all, loved.</h2>

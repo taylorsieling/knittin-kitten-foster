@@ -22,7 +22,6 @@
 
   --ff-primary: 'Amaranth', sans-serif;
   --ff-accent: 'Source Sans Pro', sans-serif;
-
 }
 
 * {
@@ -42,6 +41,10 @@ h1 {
   text-shadow: white;
 }
 
+p {
+  line-height: 5rem;
+}
+
 /* COMPONENTS */
 
 .manhattan {
@@ -49,18 +52,29 @@ h1 {
   background-color: var(--clr-manhattan);
 }
 
-.columns {
+/* COMLUMNS */
+
+.equal-columns {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  margin: 3rem 5rem;
+  margin: 0 5rem;
 }
 
-.columns > * {
+.equal-columns > * {
   flex-basis: 100%;
   padding: 0 2rem;
 }
+
+/* NAVBAR */
+
+.navbar {
+  margin: 1rem;
+  text-align: center;
+}
+
+/* HEADER */
 
 .header-title {
   padding-left: 4rem;
