@@ -1,7 +1,9 @@
 import React from 'react'
 import orangetabby from '../images/Orange-Tabby.png'
+import { useAuth0 } from '@auth0/auth0-react'
 
 const Home = () => {
+    const { loginWithRedirect,logout,user,isLoading } = useAuth0();
     return (
         <section id="home">
             <div className="header tana">
@@ -9,7 +11,7 @@ const Home = () => {
                     <div className="header-title">
                         <h1>forever foster</h1>
                         <h2>Giving you the tools to keep your foster kittens safe, healthy, and most of all, <strong>loved.</strong></h2>
-                        <p className="line-height"><button className="link-btn action" href="#">Get Started</button></p>
+                        <p className="line-height"><button className="link-btn action" onClick={() => loginWithRedirect()}>Get Started</button></p>
                     </div>
                     <img className="header-img" src={orangetabby} alt="floofy kitten"/>
                 </div>

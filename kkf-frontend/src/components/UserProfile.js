@@ -3,7 +3,7 @@ import React from 'react'
 import JSONPretty from 'react-json-pretty'
 
 export default function UserProfile() {
-    const user = useAuth090;
+    const user = useAuth0();
 
     return (
         <div>
