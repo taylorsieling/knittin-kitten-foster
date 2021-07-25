@@ -22,25 +22,27 @@ class App extends Component {
 
   render() {
     return (
-        <Router>
-          <Auth0ProviderWithHistory>
+      <Router>
+        <Auth0ProviderWithHistory>
+
           <div className="spruce">
           <Navigation />
           </div>
           
-            <Switch>
-              <Route exact path='/' component={ Home }/>
-              <Route exact path='/features' component={Features}/>
-              <Route exact path='/kittens' component={ Kittens }/>
-              <Route path='/kittens/:id/edit' component={ EditForm }/>
-              <Route path='/kittens/:id' component={ KittenContainer }/>
-              <Route exact path='/intake' component={ IntakeForm }/>
-            </Switch>
+          <Switch>
+            <Route exact path='/' component={ Home }/>
+            <Route exact path='/features' component={Features}/>
+            <Route exact path='/kittens' component={ Kittens }/>
+            <Route path='/kittens/:id/edit' component={ EditForm }/>
+            <Route path='/kittens/:id' component={ KittenContainer }/>
+            <Route exact path='/intake' component={ IntakeForm }/>
+          </Switch>
 
           <div className="spruce">
             <Footer/>
           </div>
-      </Auth0ProviderWithHistory>
+          
+        </Auth0ProviderWithHistory>
       </Router>
       
     )

@@ -34,6 +34,7 @@ const Home = () => {
 
             <div className="spruce">
                 <div className="equal-columns">
+                    <div></div>
 
                     <ul>
                         <li className="amaranth"><strong>Forever Foster</strong></li>
