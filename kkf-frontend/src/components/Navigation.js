@@ -32,6 +32,7 @@ const Navigation = () => {
         <div className="navbar">
 
             <div><h4>FOREVER FOSTER</h4></div>
+
             <div>
                 <NavLink
                     to="/"
@@ -45,16 +46,28 @@ const Navigation = () => {
                 HOME
                 </NavLink>
 
+                <NavLink
+                    to="/"
+                    exact
+                    style={navbar}
+                    activeStyle={{
+                        textdecoration: 'underline',
+                        fontWeight: 'bold',
+                    }}
+                >
+                FEATURES
+                </NavLink>
+
                 {!isLoading && !user && (
                     <button
-                        className="button"
+                        className="login"
                         onClick={() => loginWithRedirect()}
                     >Log In</button>
                 )}
 
                 {!isLoading && user && (
                     <button
-                        className="button"
+                        className="login"
                         onClick={() => logout()}
                     >Log Out</button>
                 )}

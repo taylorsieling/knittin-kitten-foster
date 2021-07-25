@@ -123,37 +123,39 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 4rem;
   text-align: center;
   font-size: 1rem;
   letter-spacing: 0.3rem;
 }
 
-.action:link, .action:visited {
-  padding: 0.6em 4em;
+.action {
+  padding: 0.8em 5em;
   background-color: var(--clr-spruce);
   border: 2px solid var(--clr-spruce);
+  font-size: 1.1rem;
   text-align: center;
   text-decoration: none;
   color: white;
   border-radius: 5px;
 }
 
-.action:hover {
-  transition: all .2s ease-in-out;
-  transform: scale(1.2);
-}
-
-.button {
+.login {
   padding: 0.6rem;
+  color: var(--clr-spruce);
+  background-color: var(--clr-sidecar);
+  border: 2px solid var(--clr-sidecar);
+  border-radius: 3px;
   font-size: 1rem;
-  letter-spacing: 0.3rem;
   text-decoration: none;
   font-weight: bold;
-  color: #3b504f;
-  background-color:#faf7f1;
-  border-radius: 3px;
 }
+
+.action:hover, .login:hover {
+  transition: all .2s ease-in-out;
+  opacity: 75%;
+}
+
 
 /* HEADER */
 

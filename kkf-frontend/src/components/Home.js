@@ -9,7 +9,7 @@ const Home = () => {
                     <div className="header-title">
                         <h1>forever foster</h1>
                         <h2>Giving you the tools to keep your foster kittens safe, healthy, and most of all, <strong>loved.</strong></h2>
-                        <p className="line-height"><a className="link-btn action" href="#">Get Started</a></p>
+                        <p className="line-height"><button className="link-btn action" href="#">Get Started</button></p>
                     </div>
                     <img className="header-img" src={orangetabby} alt="floofy kitten"/>
                 </div>
