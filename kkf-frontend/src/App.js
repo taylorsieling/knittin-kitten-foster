@@ -14,15 +14,17 @@ import { fetchKittens } from './actions/kittens'
 import Features from './components/Features'
 import Auth0ProviderWithHistory from './auth/auth0Provider'
 import Dashboard from './containers/Dashboard'
+import { useAuth0 } from '@auth0/auth0-react';
 
-class App extends Component {
+const App = () => {
 
-  componentDidMount(){
-    console.log(" app componentDidMount")
-    this.props.fetchKittens()
-  }
+  // componentDidMount(){
+  //   console.log(" app componentDidMount")
+  //   this.props.fetchKittens()
+  // }
 
-  render() {
+    const { user } = useAuth0();
+
     return (
       <Router>
         <Auth0ProviderWithHistory>
@@ -31,10 +33,9 @@ class App extends Component {
           <Navigation />
           </div>
           
-          <Switch>
-            <Route exact path='/' component={ Home }/>
+          <Switch> 
+            { !user ? <Route exact path='/' component={ Home }/> : <ProtectedRoute exact path='/dashboard' component={ Dashboard }/>}
             <Route exact path='/features' component={ Features }/>
-            <ProtectedRoute exact path='/dashboard' component={ Dashboard }/>
             <ProtectedRoute exact path='/kittens' component={ Kittens }/>
             <ProtectedRoute path='/kittens/:id/edit' component={ EditForm }/>
             <ProtectedRoute path='/kittens/:id' component={ KittenContainer }/>
@@ -49,7 +50,6 @@ class App extends Component {
       </Router>
       
     )
-  }
 }
 
 const mapStateToProps = state => {
@@ -58,4 +58,6 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchKittens })(App);
+// export default connect(mapStateToProps, { fetchKittens })(App);
+
+export default App;
