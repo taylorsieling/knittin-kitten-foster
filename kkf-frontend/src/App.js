@@ -11,6 +11,7 @@ import IntakeForm from './containers/IntakeForm'
 import EditForm from './containers/EditForm'
 import { fetchKittens } from './actions/kittens'
 import Features from './components/Features'
+import Auth0ProviderWithHistory from './auth0Provider'
 
 class App extends Component {
 
@@ -21,27 +22,26 @@ class App extends Component {
 
   render() {
     return (
+      <Auth0ProviderWithHistory>
+        <Router>
+          <div className="spruce">
+          <Navigation />
+          </div>
+          
+            <Switch>
+              <Route exact path='/' component={ Home }/>
+              <Route exact path='/features' component={Features}/>
+              <Route exact path='/kittens' component={ Kittens }/>
+              <Route path='/kittens/:id/edit' component={ EditForm }/>
+              <Route path='/kittens/:id' component={ KittenContainer }/>
+              <Route exact path='/intake' component={ IntakeForm }/>
+            </Switch>
 
-      <Router>
-
-        <div className="spruce">
-        <Navigation />
-        </div>
-        
-          <Switch>
-            <Route exact path='/' component={ Home }/>
-            <Route exact path='/features' component={Features}/>
-            <Route exact path='/kittens' component={ Kittens }/>
-            <Route path='/kittens/:id/edit' component={ EditForm }/>
-            <Route path='/kittens/:id' component={ KittenContainer }/>
-            <Route exact path='/intake' component={ IntakeForm }/>
-          </Switch>
-
-        <div className="spruce">
-          <Footer/>
-        </div>
-
-      </Router>
+          <div className="spruce">
+            <Footer/>
+          </div>
+        </Router>
+      </Auth0ProviderWithHistory>
       
     )
   }

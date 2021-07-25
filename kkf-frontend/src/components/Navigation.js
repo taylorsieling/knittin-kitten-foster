@@ -1,3 +1,4 @@
+import { useAuth0 } from '@auth0/auth0-react'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -24,6 +25,9 @@ const button = {
 }
 
 const Navigation = () => {
+
+    const { loginWithRedirect,logout,user,isLoading } = useAuth0();
+    
     return (
         <div className="navbar">
             <div><h4>FOREVER FOSTER</h4></div>
