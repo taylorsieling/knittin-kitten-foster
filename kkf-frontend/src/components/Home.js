@@ -1,5 +1,6 @@
 import React from 'react'
 import orangetabby from '../images/Orange-Tabby.png'
+import browntabby from '../images/Brown-Tabby.png'
 import { useAuth0 } from '@auth0/auth0-react'
 
 const Home = () => {
@@ -28,9 +29,18 @@ const Home = () => {
                 </div>
 
                 <div className="equal-columns">
-                    <div className="info-card tana"><h3>Intake Information</h3></div>
-                    <div className="info-card swan"><h3>Weigh-Ins and Medical History</h3></div>
-                    <div className="info-card manhattan"><h3>Adoption Applications</h3></div>
+                    <div className="info-card tana">
+                        <i class="fa fa-folder-open fa-2x" aria-hidden="true"></i>
+                        <p>Record intake information for your kittens to make them individual care profiles. Associate your kittens with litters for better organization.</p>
+                    </div>
+                    <div className="info-card swan">
+                        <i class="fa fa-balance-scale fa-2x" aria-hidden="true"></i>
+                        <p>Keep those kitten plump - and document it while you do! Easily track your kittens' weights and view stats on how they're growing.</p>
+                    </div>
+                    <div className="info-card manhattan">
+                        <i class="fa fa-medkit fa-2x" aria-hidden="true"></i>
+                        <p>Document your kittens' medical history with easy-to-fill forms, including vet visits, vaccines, parasite treatment, surgeries and more.</p>
+                    </div>
                 </div>
             </div>
 
