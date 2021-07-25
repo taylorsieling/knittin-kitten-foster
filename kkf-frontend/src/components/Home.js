@@ -15,9 +15,12 @@ const Home = () => {
                 </div>
             </section>
 
-            <div className="main oyster">
-                <p>We believe that every cat deserves a happy, healthy, loving home. And as a foster parent, so do you! </p>
-            </div>
+            <section>
+                <div className="main equal-columns">
+                    <h3><i>“A kitten is, in the animal world, what a rosebud is in the garden.”<br/><br/>- Robert Southey</i></h3>
+                    <p></p>
+                </div>
+            </section>
 
             <div className="wrapper">
 

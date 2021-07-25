@@ -21,7 +21,7 @@
   --clr-spruce: #3b504f;
   --clr-tana: #D3D6BB;
   --clr-oyster: #ead5ce;
-  --clr-apple: #c16611;
+  --clr-apple: #e59073;
 
   --ff-primary: 'Amaranth', sans-serif;
   --ff-accent: 'Source Sans Pro', sans-serif;
@@ -45,7 +45,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 /* COMPONENTS */
@@ -74,6 +74,7 @@ h2 {
   line-height: 5rem;
 }
 
+
 /* COMLUMNS */
 
 .equal-columns {
@@ -100,6 +101,11 @@ h2 {
 
 .header-title {
   padding-left: 4rem;
+}
+
+.main {
+  color: var(--clr-apple);
+  padding: 3rem 1rem;
 }
 
 .row {
