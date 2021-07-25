@@ -15,7 +15,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="sidecar">
+            <div className="sidecar header-body">
                 <div className="main equal-columns">
                     <h2><i>“A kitten is, in the animal world, what a rosebud is in the garden.”<br/><br/>- Robert Southey</i></h2>
                     <p></p>
@@ -29,6 +29,30 @@ const Home = () => {
                     <div className="info-card tana"><h3>Record and Update Kitten Intake Information</h3></div>
                     <div className="info-card swan"><h3>Track Weigh-Ins and Document Medical History</h3></div>
                     <div className="info-card manhattan"><h3>Receive and Manage Adoption Applications</h3></div>
+                </div>
+            </div>
+
+            <div className="spruce">
+                <div className="equal-columns">
+
+                    <ul>
+                        <li className="amaranth"><strong>Forever Foster</strong></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Take a Tour</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                    <ul>
+                        <li className="amaranth"><strong>Getting Started</strong></li>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Log In</a></li>
+                        <li><a href="#">Adopt a Kitten</a></li>
+                    </ul>
+                    <ul>
+                        <li className="amaranth"><strong>Contact</strong></li>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Github</a></li>
+                    </ul>
                 </div>
             </div>
             

@@ -5,17 +5,29 @@ const navbar = {
     width: '4rem',
     padding: '1rem',
     fontSize: '1rem',
-    letterSpacing: '0.5rem',
+    letterSpacing: '0.3rem',
     textDecoration: 'none',
     fontWeight: 'bold',
-    color: '#fff',
+    color: '#faf7f1',
+}
+
+const button = {
+    width: '4rem',
+    padding: '0.6rem',
+    fontSize: '1rem',
+    letterSpacing: '0.3rem',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    color: '#3b504f',
+    backgroundColor:'#faf7f1',
+    borderRadius: '3px'
 }
 
 const Navigation = () => {
     return (
         <div className="navbar">
-            <div className="float-l"><h4>LOGO</h4></div>
-            <div className="float-r">
+            <div><h4>FOREVER FOSTER</h4></div>
+            <div>
                 <NavLink
                     to="/"
                     exact
@@ -23,7 +35,6 @@ const Navigation = () => {
                     activeStyle={{
                         textdecoration: 'underline',
                         fontWeight: 'bold',
-                        color: '#fff'
                     }}
                 >
                 HOME
@@ -36,23 +47,21 @@ const Navigation = () => {
                     activeStyle={{
                         textdecoration: 'underline',
                         fontWeight: 'bold',
-                        color: '#fff'
                     }}
                 >
-                KITTENS
+                LOGIN
                 </NavLink>
 
                 <NavLink
                     to="/intake"
                     exact
-                    style={navbar}
+                    style={button}
                     activeStyle={{
                         textdecoration: 'underline',
                         fontWeight: 'bold',
-                        color: '#fff'
                     }}
                 >
-                INTAKE
+                SIGN UP
                 </NavLink>
             </div>
         </div>
