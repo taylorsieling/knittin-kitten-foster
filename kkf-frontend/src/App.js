@@ -24,7 +24,7 @@ class App extends Component {
 
       <Router>
 
-        <div className="river">
+        <div className="spruce">
         <Navigation />
         </div>
         

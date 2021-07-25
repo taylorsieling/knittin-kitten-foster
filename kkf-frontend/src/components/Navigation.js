@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom'
 const navbar = {
     width: '4rem',
     padding: '1rem',
+    fontSize: '1rem',
+    letterSpacing: '0.5rem',
     textDecoration: 'none',
     fontWeight: 'bold',
     color: '#fff',

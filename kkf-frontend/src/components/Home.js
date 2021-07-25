@@ -4,22 +4,19 @@ import orangetabby from '../images/Orange-Tabby.png'
 const Home = () => {
     return (
         <div>
-            <section id="header" className="manhattan">
+            <section id="header" className="tana">
                 <div className="equal-columns">
                     <div className="header-title">
                         <h1>forever foster</h1>
-                        <h2>Giving you the tools to help keep your fosters safe, healthy, and most of all, loved.</h2>
+                        <h2>Giving you the tools to keep your foster kittens safe, healthy, and most of all, <strong>loved.</strong></h2>
                         <p className="line-height"><a className="link-btn action" href="#">Get Started</a></p>
                     </div>
                     <img className="header-img" src={orangetabby} alt="floofy kitten"/>
                 </div>
             </section>
 
-            <div className="main">
-                <p>
-                    Welcome! I'm the Knittin' Kitten Foster, a kitten foster mom and knitting enthusiast! <br/><br/>
-                    I believe every cat deserves a happy and healthy life. I aim to provide kittens and cats with a loving environment and around-the-clock care, so that one day they can find their forever home. I take on neonatal kittens, pregnant and nursing mama cats, ill or injured cats, and senior cats - happily providing medical care, play and stimulation, and of course, kisses and cuddles.
-                </p>
+            <div className="main oyster">
+                <p>We believe that every cat deserves a happy, healthy, loving home. And as a foster parent, so do you! </p>
             </div>
 
             <div className="wrapper">

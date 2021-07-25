@@ -18,8 +18,10 @@
   --clr-apple: #a64e43;
 
   --clr-manhattan: #f4c1a6;
-  --clr-river: #4a5d66;
+  --clr-spruce: #3b504f;
   --clr-tana: #D3D6BB;
+  --clr-oyster: #ead5ce;
+  --clr-apple: #c16611;
 
   --ff-primary: 'Amaranth', sans-serif;
   --ff-accent: 'Source Sans Pro', sans-serif;
@@ -30,33 +32,42 @@
 }
 
 body {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-family: var(--ff-accent);
 }
 
 h1 {
   font-family: var(--ff-primary);
-  font-size: 4.6rem;
+  font-size: 4.2rem;
   line-height: 1rem;
-  color: var(--clr-river);
+  color: var(--clr-spruce);
   text-shadow: white;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 /* COMPONENTS */
 
 .manhattan {
-  color: var(--clr-river);
+  color: var(--clr-spruce);
   background-color: var(--clr-manhattan);
 }
 
 .tana {
-  color: var(--clr-river);
+  color: var(--clr-spruce);
   background-color: var(--clr-tana);
 }
 
-.river {
+.spruce {
   color: var(--clr-tana);
-  background-color: var(--clr-river);
+  background-color: var(--clr-spruce);
+}
+
+.oyster {
+  color: var(--clr-apple);
+  background-color: var(--clr-oyster);
 }
 
 .line-height {
@@ -116,8 +127,8 @@ h1 {
 
 .action:link, .action:visited {
   padding: 0.6em 4em;
-  background-color: var(--clr-river);
-  border: 2px solid var(--clr-river);
+  background-color: var(--clr-spruce);
+  border: 2px solid var(--clr-spruce);
   text-align: center;
   text-decoration: none;
   color: white;
