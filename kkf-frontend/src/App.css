@@ -22,6 +22,8 @@
   --clr-tana: #D3D6BB;
   --clr-oyster: #ead5ce;
   --clr-apple: #e59073;
+  --clr-sidecar: #faf7f1;
+  --clr-swan: #d7ece6;
 
   --ff-primary: 'Amaranth', sans-serif;
   --ff-accent: 'Source Sans Pro', sans-serif;
@@ -32,7 +34,7 @@
 }
 
 body {
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-family: var(--ff-accent);
 }
 
@@ -48,7 +50,7 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* COMPONENTS */
+/* COLOR UTILITY */
 
 .manhattan {
   color: var(--clr-spruce);
@@ -70,12 +72,31 @@ h2 {
   background-color: var(--clr-oyster);
 }
 
+.sidecar {
+  background-color: var(--clr-sidecar);
+}
+
+.swan {
+  color: var(--clr-spruce);
+  background-color: var(--clr-swan);
+}
+
+.apple {
+  color: var(--clr-spruce);
+  background-color: var(--clr-apple);
+}
+
 .line-height {
   line-height: 5rem;
 }
 
 
-/* COMLUMNS */
+/* COLUMNS */
+
+.container {
+  margin: 0 5rem;
+  padding: 0 2rem;
+}
 
 .equal-columns {
   display: flex;
@@ -99,14 +120,38 @@ h2 {
 
 /* HEADER */
 
+.header {
+  height: 35.5rem;
+}
+
 .header-title {
   padding-left: 4rem;
+}
+
+.header-img {
+  object-fit: scale-down;
+  height: 42rem;
+  width: 100%;
 }
 
 .main {
   color: var(--clr-apple);
   padding: 3rem 1rem;
 }
+
+.info-card {
+  margin: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
 
 .row {
   display: flex;
@@ -121,15 +166,9 @@ h2 {
   width: 50%;
 }
 
-.header-img {
-  object-fit: scale-down;
-  height: 42rem;
-  width: 100%;
-}
 
-#header {
-   height: 35.5rem;
-}
+
+
 
 .action:link, .action:visited {
   padding: 0.6em 4em;

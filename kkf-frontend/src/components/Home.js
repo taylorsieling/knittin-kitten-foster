@@ -3,8 +3,8 @@ import orangetabby from '../images/Orange-Tabby.png'
 
 const Home = () => {
     return (
-        <div>
-            <section id="header" className="tana">
+        <section id="home">
+            <div className="header tana">
                 <div className="equal-columns">
                     <div className="header-title">
                         <h1>forever foster</h1>
@@ -13,15 +13,29 @@ const Home = () => {
                     </div>
                     <img className="header-img" src={orangetabby} alt="floofy kitten"/>
                 </div>
-            </section>
+            </div>
 
-            <section>
+            <div className="sidecar">
                 <div className="main equal-columns">
-                    <h3><i>“A kitten is, in the animal world, what a rosebud is in the garden.”<br/><br/>- Robert Southey</i></h3>
+                    <h2><i>“A kitten is, in the animal world, what a rosebud is in the garden.”<br/><br/>- Robert Southey</i></h2>
                     <p></p>
                 </div>
-            </section>
 
+                <div className="container">
+                    <p>We want to see your foster kittens bloom! To do that, we created Forever Foster - an application to help you manage kitten intake information, record growth and medical data, process adoption applications, and much more! Spend less time maintaining records and paperwork, and more time saving tiny lives. Create an account to get started!</p>
+                </div>
+
+                <div className="equal-columns">
+                    <div className="info-card tana"><h3>Record and Update Kitten Intake Information</h3></div>
+                    <div className="info-card swan"><h3>Track Weigh-Ins and Document Medical History</h3></div>
+                    <div className="info-card manhattan"><h3>Receive and Manage Adoption Applications</h3></div>
+                </div>
+            </div>
+            
+           
+
+
+{/* 
             <div className="wrapper">
 
                 <div className="card">
@@ -54,8 +68,8 @@ const Home = () => {
                     </div>
                 </div>
     
-            </div>
-        </div>
+            </div> */}
+        </section>
     )
 }
 
