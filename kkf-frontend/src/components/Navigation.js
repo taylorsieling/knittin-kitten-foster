@@ -27,9 +27,10 @@ const button = {
 const Navigation = () => {
 
     const { loginWithRedirect,logout,user,isLoading } = useAuth0();
-    
+
     return (
         <div className="navbar">
+
             <div><h4>FOREVER FOSTER</h4></div>
             <div>
                 <NavLink
@@ -44,7 +45,23 @@ const Navigation = () => {
                 HOME
                 </NavLink>
 
-                <NavLink
+                {!isLoading && !user && (
+                    <button
+                        className="button"
+                        onClick={() => loginWithRedirect()}
+                    >Log In</button>
+                )}
+
+                {!isLoading && user && (
+                    <button
+                        className="button"
+                        onClick={() => logout()}
+                    >Log Out</button>
+                )}
+
+            </div>
+
+                {/* <NavLink
                     to="/kittens"
                     exact
                     style={navbar}
@@ -54,9 +71,9 @@ const Navigation = () => {
                     }}
                 >
                 LOGIN
-                </NavLink>
+                </NavLink> */}
 
-                <NavLink
+                {/* <NavLink
                     to="/intake"
                     exact
                     style={button}
@@ -66,11 +83,10 @@ const Navigation = () => {
                     }}
                 >
                 SIGN UP
-                </NavLink>
-            </div>
+                </NavLink> */}
+
         </div>
 
-        
     )
 }
 

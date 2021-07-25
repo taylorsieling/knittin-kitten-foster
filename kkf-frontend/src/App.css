@@ -129,6 +129,32 @@ a {
   letter-spacing: 0.3rem;
 }
 
+.action:link, .action:visited {
+  padding: 0.6em 4em;
+  background-color: var(--clr-spruce);
+  border: 2px solid var(--clr-spruce);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.action:hover {
+  transition: all .2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.button {
+  padding: 0.6rem;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #3b504f;
+  background-color:#faf7f1;
+  border-radius: 3px;
+}
+
 /* HEADER */
 
 .header {
@@ -167,21 +193,6 @@ a {
 .footer {
   display: flex;
   text-transform: uppercase;
-}
-
-.action:link, .action:visited {
-  padding: 0.6em 4em;
-  background-color: var(--clr-spruce);
-  border: 2px solid var(--clr-spruce);
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  border-radius: 5px;
-}
-
-.action:hover {
-  transition: all .2s ease-in-out;
-  transform: scale(1.2);
 }
 
 .row {

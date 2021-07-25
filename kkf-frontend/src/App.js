@@ -22,8 +22,8 @@ class App extends Component {
 
   render() {
     return (
-      <Auth0ProviderWithHistory>
         <Router>
+          <Auth0ProviderWithHistory>
           <div className="spruce">
           <Navigation />
           </div>
@@ -40,8 +40,8 @@ class App extends Component {
           <div className="spruce">
             <Footer/>
           </div>
-        </Router>
       </Auth0ProviderWithHistory>
+      </Router>
       
     )
   }
