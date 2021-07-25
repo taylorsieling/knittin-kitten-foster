@@ -37,7 +37,7 @@ class App extends Component {
             <Route exact path='/intake' component={ IntakeForm }/>
           </Switch>
 
-        <div className="footer">
+        <div className="spruce">
           <Footer/>
         </div>
 

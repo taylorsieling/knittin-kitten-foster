@@ -119,7 +119,7 @@ a {
 
 /* NAVBAR */
 
-.navbar {
+.navbar, .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,7 +146,7 @@ a {
 }
 
 .header-body {
-  padding: 2rem 0 4rem 0;
+  padding: 0.5rem 0 4rem 0;
 }
 
 .main {
@@ -156,36 +156,18 @@ a {
 
 .info-card {
   margin: 2rem;
-  padding: 2rem 1rem;
+  padding: 2rem 3rem;
   text-align: center;
   align-items: center;
-  border-radius: 5px;
+  color: #000;
 }
 
+/* FOOTER */
 
-
-
-
-
-
-
-
-.row {
+.footer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
+  text-transform: uppercase;
 }
-
-.column {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-
-
-
 
 .action:link, .action:visited {
   padding: 0.6em 4em;
@@ -200,4 +182,17 @@ a {
 .action:hover {
   transition: all .2s ease-in-out;
   transform: scale(1.2);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }

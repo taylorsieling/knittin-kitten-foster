@@ -26,9 +26,9 @@ const Home = () => {
                 </div>
 
                 <div className="equal-columns">
-                    <div className="info-card tana"><h3>Record and Update Kitten Intake Information</h3></div>
-                    <div className="info-card swan"><h3>Track Weigh-Ins and Document Medical History</h3></div>
-                    <div className="info-card manhattan"><h3>Receive and Manage Adoption Applications</h3></div>
+                    <div className="info-card tana"><h3>Intake Information</h3></div>
+                    <div className="info-card swan"><h3>Weigh-Ins and Medical History</h3></div>
+                    <div className="info-card manhattan"><h3>Adoption Applications</h3></div>
                 </div>
             </div>
 
