@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-07-25
+  time: 2021-07-25 15:40:24
+  value: MyString
+  unit: MyString
+  kitten: one
+
+two:
+  date: 2021-07-25
+  time: 2021-07-25 15:40:24
+  value: MyString
+  unit: MyString
+  kitten: two

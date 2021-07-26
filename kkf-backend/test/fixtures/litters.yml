@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  theme: MyString
+  intake_date: 2021-07-25
+  intake_time: 2021-07-25 15:39:09
+  location_found: MyString
+  intake_type: MyString
+  belongs_to: 
+
+two:
+  theme: MyString
+  intake_date: 2021-07-25
+  intake_time: 2021-07-25 15:39:09
+  location_found: MyString
+  intake_type: MyString
+  belongs_to: 

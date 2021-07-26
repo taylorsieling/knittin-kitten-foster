@@ -1,0 +1,2 @@
+class MedicalEntry < ApplicationRecord
+end

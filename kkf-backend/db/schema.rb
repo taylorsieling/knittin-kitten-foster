@@ -10,29 +10,70 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_03_220633) do
+ActiveRecord::Schema.define(version: 2021_07_25_204207) do
+
+  create_table "fosters", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "picture"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "kittens", force: :cascade do |t|
     t.string "name"
     t.string "sex"
-    t.string "age"
     t.date "dob"
-    t.string "weight"
     t.string "breed"
     t.string "color"
     t.string "pattern"
     t.boolean "altered"
     t.boolean "microchipped"
-    t.date "intake_date"
-    t.string "intake_time"
-    t.string "location_found"
-    t.string "intake_type"
     t.string "status"
-    t.string "current_location"
-    t.string "description"
+    t.string "bio"
     t.string "portrait_url"
+    t.integer "litter_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["litter_id"], name: "index_kittens_on_litter_id"
   end
 
+  create_table "litters", force: :cascade do |t|
+    t.string "theme"
+    t.date "intake_date"
+    t.time "intake_time"
+    t.string "location_found"
+    t.string "intake_type"
+    t.integer "foster_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["foster_id"], name: "index_litters_on_foster_id"
+  end
+
+  create_table "medical_entries", force: :cascade do |t|
+    t.string "title"
+    t.date "date"
+    t.time "time"
+    t.string "notes"
+    t.integer "kitten_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["kitten_id"], name: "index_medical_entries_on_kitten_id"
+  end
+
+  create_table "weights", force: :cascade do |t|
+    t.date "date"
+    t.time "time"
+    t.string "value"
+    t.string "unit"
+    t.integer "kitten_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["kitten_id"], name: "index_weights_on_kitten_id"
+  end
+
+  add_foreign_key "kittens", "litters"
+  add_foreign_key "litters", "fosters"
+  add_foreign_key "medical_entries", "kittens"
+  add_foreign_key "weights", "kittens"
 end
