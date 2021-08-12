@@ -255,7 +255,6 @@ button:hover {
     }
   
   .card-header {
-    display: flex;
     width: 100%;
     color: black;
     text-align: left;
