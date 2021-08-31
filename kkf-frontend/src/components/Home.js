@@ -14,48 +14,45 @@ const Home = () => {
             <div className="main">
                 <div className="row">
                     <div><img className="side-img" src="https://i.ibb.co/2y953Dp/RPT.png"/></div>
-                    <div>
-                        <p className="lead-p">
-                            <strong>Welcome! I'm Taylor, the Knittin' Kitten Foster, a kitten foster mom and knitting enthusiast! </strong>
-                        <br/><br/>
-                        I believe every cat deserves a happy and healthy life. I aim to provide kittens and cats with a loving environment and around-the-clock care, so that one day they can find their forever home. I take on neonatal kittens, pregnant and nursing mama cats, ill or injured cats, and senior cats - happily providing medical care, play and stimulation, and of course, kisses and cuddles.
+                    <div className="info">
+                        <h1 className="subtitle">Meet the Foster</h1>
+                        <p><br/><strong>I'm Taylor - A kitten foster mom and knitting enthusiast!</strong></p>
+                        <p>I believe every cat deserves a happy and healthy life. I aim to provide kittens and cats with a loving environment and around-the-clock care, so that one day they can find their forever home. <br/><br/>I take on neonatal kittens, pregnant and nursing mama cats, ill or injured cats, and senior cats - happily providing medical care, play and stimulation, and of course, kisses and cuddles.
                         </p>
                     </div>
                 </div>
                 
             </div>
 
+            <div className="center section">
+                <h1 className="section-title">Support the Kittens</h1>
+            </div>
+
             <div className="wrapper">
 
-                <div className="card">
-                    <div className="card-header">
-                        <img className="cardimg" src="https://images.unsplash.com/photo-1597626133612-d9977d3eec18?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Brown Tabby Kitten" width="100"/>
+                <a href="https://www.instagram.com/knittinkittenfoster/">
+                    <div className="box box-pink">
+                        <div className="card-title">
+                            <h3>Follow on Instagram</h3>
+                        </div>
                     </div>
-                    <div className="card-title">
-                        <hr/>
-                        <h3>Rescue & Fostering</h3>
-                    </div>
-                </div>
+                </a>
 
-                <div className="card">
-                    <div className="card-header">
-                        <img className="cardimg" src="https://images.unsplash.com/photo-1597626291233-73dfa25093eb?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDF8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Calico Kitten" width="100"/>
+                <a href="https://www.galvestonhumane.org/donate">
+                    <div className="box box-blue">
+                        <div className="card-title">
+                            <h3>Donate to GIHS</h3>
+                        </div>
                     </div>
-                    <div className="card-title">
-                        <hr/>
-                        <h3>Education & Outreach</h3>
-                    </div>
-                </div>
+                </a>
 
-                <div className="card">
-                    <div className="card-header">
-                        <img className="cardimg" src="https://images.unsplash.com/photo-1587996833651-06a23343b15d?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDN8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Orange Tabby Kitten" width="100"/>
-                    </div>
+                <a href="https://www.amazon.com/hz/wishlist/ls/33116DMWWDBS5?ref_=wl_share">
+                <div className="box box-yellow">
                     <div className="card-title">
-                        <hr/>
-                        <h3>Adoption & Forever Homes</h3>
+                        <h3>Amazon Wish List</h3>
                     </div>
                 </div>
+                </a>
     
             </div>
         </div>

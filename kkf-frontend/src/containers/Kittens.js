@@ -23,8 +23,13 @@ class Kittens extends Component {
         return (
             <div>
                 <div className="kittens">
-                    <h1 className="center">Our Current Kittens</h1>
+                    <div className="title">
+                        <h2>Knittin' Kitten Foster</h2>
+                        <h1>Current Foster Kittens</h1>
+                    </div> 
                 </div>
+       
+
                 <div className="bg-green">
                     {this.handleLoading()}
                 </div>
