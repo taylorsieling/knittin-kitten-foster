@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Source+Sans+Pro&display=swap');@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Poppins&display=swap');
 
 /* pistachio: #b7b578 */
 /* olive: #98b75e */
@@ -15,7 +15,7 @@
 body,
 html {
   overflow-x: hidden;
-  font-family: 'Poppin', 'Veranda', sans-serif;
+  font-family: 'Source Sans Pro', 'Veranda', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,11 +26,12 @@ div {
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Lora', 'Veranda', sans-serif;
+  font-family: 'Lato', 'Veranda', sans-serif;
 }
 
 h1 {
-  font-family: 'Lora', 'Veranda', sans-serif;
+  font-family: 'Lato', 'Veranda', sans-serif;
+  font-weight: 800;
   font-size: 52px;
   margin: 0;
 }
@@ -76,18 +77,25 @@ a.kitten-link {
 }
 
 a.button {
-  width: 100%;
-  padding: 8px 50px;
-  margin-top: 10px;
-  border: 2px solid black;
-  border-radius: 0;
-  background-color: black;
+  padding: 8px 30px;
+  margin: 30px 10px 10px 0;
+  border: 2px solid #e89897;
+  background-color: #e89897;
   color: white;
   transition: 0.5s;
   outline: none;
   font-family: 'Source Sans Pro', 'Veranda', sans-serif;
-  font-size: 16px;
-  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+a.button:hover {
+  opacity: 75%;
+  font-weight: initial;
+}
+
+.btn-block {
+  margin-top: 30px;
 }
 
 
@@ -113,7 +121,7 @@ a.button {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  min-height: 520px;
+  min-height: 560px;
 }
 
 .heading {
@@ -324,7 +332,7 @@ button:hover {
 
   .row > div {
     margin: 10px;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 20px 60px;
     width: 400px;
   }
 
