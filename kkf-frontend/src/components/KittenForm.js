@@ -8,50 +8,62 @@ const KittenForm = props => {
         <>      
         <form onSubmit={props.handleSubmit}>
             <div className="form">
-            <div className="form-grid">
+            <div className="form-flexbox">
                 
-                <div className="grid-full"><h3>Kitten Description</h3></div>
+                <div className="flex-item-full"><h3>Kitten Description</h3></div>
                 
-                <div>
+                <div className="flex-item-left">
                     <input className="input-txt" type="text" value={kitten.name} name="name" placeholder="Name" onChange={props.handleChange} required/>
                 </div>
 
-                <div>
+                <div className="flex-item-right">
                     <input type="text" value={kitten.age} name="age" placeholder="Age" onChange={props.handleChange} required/>
                 </div>
 
-                <div>
-                    <div>
-                        <label>Sex: </label> <br/> <br/>
-                        <input className="radio" type="radio" id="male" name="sex" value="Male" checked={kitten.sex === "Male"} onChange={props.handleChange}/> &nbsp;
-                        <label htmlFor="male">Male</label> &nbsp;
-                        <input className="radio" type="radio" id="female" name="sex" value="Female" checked={kitten.sex === "Female"} onChange={props.handleChange}/> &nbsp;
-                        <label htmlFor="female">Female</label>
+                <div className="flex-item-left">
+                    <label>Sex: </label>
+                    <div className="radio-buttons">
+
+                        <div>
+                            <input className="radio" type="radio" id="male" name="sex" value="Male" checked={kitten.sex === "Male"} onChange={props.handleChange}/> &nbsp;
+                            <label for="male" class="option male">
+                                <span className="radio-label">Male</span>
+                            </label>
+                        </div>
+                        
+                        <div>
+                            <input className="radio" type="radio" id="female" name="sex" value="Female" checked={kitten.sex === "Female"} onChange={props.handleChange}/> &nbsp;
+                            <label for="female" class="option female">
+                                <span className="radio-label">Female</span>
+                            </label>
+                        </div>
+                        
                     </div>
+
                 </div>
 
-                <div className="label">
+                <div className="flex-item-right">
                     <label>Date of Birth: </label>
                     <input type="date" value={kitten.dob} name="dob" onChange={props.handleChange} required/>
                 </div>  
 
-                <div>
+                <div className="flex-item-left">
                     <input type="text" value={kitten.weight} name="weight" placeholder="Weight" onChange={props.handleChange} required/>
                 </div>   
 
-                <div>
+                <div className="flex-item-right">
                     <input type="text" value={kitten.breed} name="breed" placeholder="Breed" onChange={props.handleChange} required/>
                 </div> 
 
-                <div>
+                <div className="flex-item-left">
                     <input type="text" value={kitten.color} name="color" placeholder="Color" onChange={props.handleChange} required/>
                 </div>
                 
-                <div>
+                <div className="flex-item-right">
                     <input type="text" value={kitten.pattern} name="pattern" placeholder="Pattern" onChange={props.handleChange} required/>
                 </div>
 
-                <div className="grid-full"><h3>Medical Information</h3></div>
+                <div className="flex-item-full"><h3>Medical Information</h3></div>
 
                 <div>
                     <div>
@@ -65,6 +77,22 @@ const KittenForm = props => {
                     </div> 
                 </div>
 
+                <input type="radio" name="select" id="option-1" checked/>
+   
+                <input type="radio" name="select" id="option-2"/>
+        
+                <label for="option-1" class="option option-1">
+                    
+                    <div class="dot"></div>
+                    <span>Student</span>
+                </label>
+        
+                <label for="option-2" class="option option-2">
+                    <div class="dot"></div>
+                    <span>Teacher</span>
+                </label>
+      
+
                 <div>
                     <div>
                         <div className="label" >
@@ -77,14 +105,14 @@ const KittenForm = props => {
                     </div> 
                 </div>
 
-                <div className="grid-full"><h3>Intake Information</h3></div>
+                <div className="flex-item-full"><h3>Intake Information</h3></div>
 
-                <div className="label">
+                <div className="flex-item-left">
                         <label>Intake Date: </label><br/>
                         <input type="date" value={kitten.intake_date} name="intake_date" onChange={props.handleChange} required/>
                 </div>
 
-                <div>
+                <div className="flex-item-right">
                     <label>Intake Time: </label>
                     <select className="select" name='intake_time' onChange={props.handleChange} value={kitten.intake_time}>
                         <option defaultValue value=''>Choose Time</option>
@@ -115,7 +143,7 @@ const KittenForm = props => {
                     </select>
                 </div>
 
-                <div>
+                <div className="flex-item-left">
                     <label>Intake Type: </label>
                     <select className="select" name='intake_type' onChange={props.handleChange} value={kitten.intake_type}>
                         <option defaultValue value=''>Choose Type</option>
@@ -125,14 +153,14 @@ const KittenForm = props => {
                     </select>
                 </div>
 
-                <div>
+                <div className="flex-item-right">
                     <label>Location Found: </label>
                     <input type="text" value={kitten.location_found} name="location_found" placeholder="Enter Address" onChange={props.handleChange} required/>
                 </div>
 
-                <div className="grid-full"><h3>Adoption Information</h3></div>
+                <div className="flex-item-full"><h3>Adoption Information</h3></div>
         
-                <div>
+                <div className="flex-item-left">
                     <label>Adoption Status: </label><br/>
                     <select className="select" name='status' onChange={props.handleChange} value={kitten.status}>
                         <option defaultValue value=''>Choose Status</option>
@@ -143,7 +171,7 @@ const KittenForm = props => {
                     </select>
                 </div>
 
-                <div>
+                <div className="flex-item-right">
                     <label>Current Location: </label>
                     <select className="select" name='current_location' onChange={props.handleChange} value={kitten.current_location}>
                         <option defaultValue value=''>Choose Location</option>
@@ -154,15 +182,15 @@ const KittenForm = props => {
                     </select>
                 </div>
 
-                <div className="grid-full">
-                    <input type="textarea" value={kitten.description} name="description" placeholder="Pet Description" onChange={props.handleChange} required/>
+                <div className="flex-item-full">
+                    <input type="textarea" value={kitten.description} name="description" placeholder="Pet Bio" onChange={props.handleChange} required/>
                 </div>
 
-                <div>
+                <div className="flex-item-full">
                     <input type="text" value={kitten.portrait_url} name="portrait_url" placeholder="Portrait URL" onChange={props.handleChange} required/>
                 </div>
 
-                <div>
+                <div className="flex-item-full">
                     <input type="submit" name="submit" value={props.button}/>
                 </div>
                 
