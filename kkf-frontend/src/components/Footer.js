@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Footer = () => {
     return (
-           <div>© 2021 Taylor Sieling</div>
+        <div>
+            Knittin' Kitten Foster | <a className="foot" href="https://taylorsieling.dev">© 2021 Taylor Sieling</a>
+        </div>
     )
 }
