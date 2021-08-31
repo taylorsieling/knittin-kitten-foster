@@ -5,8 +5,8 @@ const navbar = {
     width: '150px',
     padding: '15px',
     textDecoration: 'none',
-    fontWeight: 'bold',
-    color: '#7b7167',
+    fontWeight: 500,
+    color: '#595a5c',
 }
 
 const Navigation = () => {
@@ -17,9 +17,7 @@ const Navigation = () => {
                 exact
                 style={navbar}
                 activeStyle={{
-                    textdecoration: 'underline',
                     fontWeight: 'bold',
-                    color: '#bdd1c5'
                 }}
             >
             HOME
@@ -30,9 +28,7 @@ const Navigation = () => {
                 exact
                 style={navbar}
                 activeStyle={{
-                    textdecoration: 'underline',
                     fontWeight: 'bold',
-                    color: '#b6dee5'
                 }}
             >
             KITTENS
@@ -43,9 +39,7 @@ const Navigation = () => {
                 exact
                 style={navbar}
                 activeStyle={{
-                    textdecoration: 'underline',
                     fontWeight: 'bold',
-                    color: '#f9d7bc '
                 }}
             >
             INTAKE
