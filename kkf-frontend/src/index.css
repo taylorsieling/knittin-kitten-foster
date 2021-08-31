@@ -40,6 +40,10 @@ p {
   color: #727375;
 }
 
+.lead-p {
+  font-size: 24px;
+}
+
 hr {
   text-align: center;
   width: 30%;
@@ -101,6 +105,10 @@ a.button:hover {
   margin: 0;
 }
 
+.center {
+  text-align: center;
+}
+
 .navbar {
   text-align: center;
   background-color: #cad9d2;
@@ -133,12 +141,12 @@ a.button:hover {
   padding: 20px 20px 60px 20px;
 }
 
-.intake {
-  background-color: #f9d7bc ;
+.kittens, .intake {
+  background-color: #f7f7f7;
 }
 
-.kittens {
-  background-color: #C4dcdf;
+.bg-green {
+  background-color: #b7b578;
 }
 
 .applications {
@@ -147,7 +155,7 @@ a.button:hover {
 
 .footer {
   padding: 20px 0px;
-  background-color: #727375;
+  background-color: #595a5c;
   color: #fff;
   width: 100%;
 }
@@ -262,7 +270,7 @@ button:hover {
     position: relative;
     box-sizing: border-box;
     transition: box-shadow 0.1s ease-in-out;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    /* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23); */
   }
 
   .cardimg {
@@ -316,7 +324,8 @@ button:hover {
   /* ROWS AND COLUMNS */
 
   .wrapper {
-    margin: 30px 30px;
+    margin: 0px 30px;
+    padding: 60px 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

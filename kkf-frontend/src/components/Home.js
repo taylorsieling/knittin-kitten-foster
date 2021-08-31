@@ -15,8 +15,9 @@ const Home = () => {
                 <div className="row">
                     <div><img className="side-img" src="https://i.ibb.co/2y953Dp/RPT.png"/></div>
                     <div>
-                        <p>
-                        Welcome! I'm Taylor, the Knittin' Kitten Foster, a kitten foster mom and knitting enthusiast! <br/><br/>
+                        <p className="lead-p">
+                            <strong>Welcome! I'm Taylor, the Knittin' Kitten Foster, a kitten foster mom and knitting enthusiast! </strong>
+                        <br/><br/>
                         I believe every cat deserves a happy and healthy life. I aim to provide kittens and cats with a loving environment and around-the-clock care, so that one day they can find their forever home. I take on neonatal kittens, pregnant and nursing mama cats, ill or injured cats, and senior cats - happily providing medical care, play and stimulation, and of course, kisses and cuddles.
                         </p>
                     </div>
