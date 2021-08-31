@@ -88,7 +88,7 @@ class IntakeForm extends Component {
         return (
             <div>
                 <div className="intake">
-                    <h1>New Kitten Intake Form</h1>
+                    <h1 className="center">New Kitten Intake Form</h1>
                 </div>
                 <KittenForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} kitten={this.state} button='SUBMIT'/>
             </div>
