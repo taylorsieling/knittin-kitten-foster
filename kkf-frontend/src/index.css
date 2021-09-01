@@ -512,7 +512,6 @@ button:hover {
 .input,
 .select,
 .textarea,
-.radio,
 .checkbox {
   box-sizing: border-box;
   margin: 0;
@@ -520,7 +519,7 @@ button:hover {
   font: inherit;
 }
 
-label {
+.input-label {
   margin: 8px 10px;
 }
 
@@ -535,7 +534,7 @@ input[type=text] {
   font-size: 16px;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type=textarea]:focus {
   border: 1px solid #f9d7bc ;
 }
 
@@ -550,23 +549,9 @@ input[type=textarea] {
   outline: none;
   font-family: 'Source Sans Pro', 'Veranda', sans-serif;
   font-size: 14px;
-  }
-
-input[type=textarea]:focus {
-  border: 1px solid #f9d7bc  ;
 }
 
 input[type="date"] {
-  padding: 12px 20px;
-  margin: 8px 10px;
-  border: 1px solid #727375;
-  transition: 0.5s;
-  outline: none;
-  color: #727375;
-  width: 100%;
-}
-
-input[type="time"] {
   padding: 12px 20px;
   margin: 8px 10px;
   border: 1px solid #727375;
@@ -619,8 +604,7 @@ input[type=submit] {
 .radio-buttons {
   width: 100%;
   border: 1px solid #727375;
-  padding: 12px 20px;
-  margin: 8px 10px; 
+  background-color: #fff;
   display: flex;
   text-align: center;
   flex-direction: row;
@@ -628,26 +612,71 @@ input[type=submit] {
   align-content: center;
 }
 
-.radio-buttons > div {
-  text-align: center;
+.radio-buttons input {
   width: 100%;
+	appearance: none;
+	outline: none;
+  background-color: #fff;
+	padding: 12px 8px;
+	color: #727375;
+	font-size: 16px;
+  transition: all 100ms linear;
 }
 
-input[type="radio"]{
-  display: none;
-}
-
-.option span{
-  color: #727375;
-  padding: 0 12px;
-}
-
-#male:checked:checked ~ .male,
-#female:checked:checked ~ .female{
-  text-align: center;
+.radio-buttons input:checked {
   width: 100%;
+	background-color: #727375;
+	color: #fff;
+  padding: 12px 10px;
+}
+
+.radio-buttons input:before {
+	content: attr(label);
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.radio-left {
+  align-self: start;
+}
+
+.radio-right {
+  align-self: end;
+}
+
+.radio {
+  margin: 8px 10px;
+  width: 100%;
+  display: flex;
+}
+
+.radio input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  padding: 12px 20px;
+}
+
+.radio label {
+  font-size: 1em;
+  text-align: center;
+  padding: 12px 8px;
   border: 1px solid #727375;
+  width: 50%;
+}
+
+.radio label:hover {
+  cursor: pointer;
+}
+
+.radio input#male:checked+label {
   background-color: #727375;
   color: white;
-  padding: 0 12px;
+}
+
+.radio input#female:checked+label {
+  background-color: #727375;
+  color: white;
 }

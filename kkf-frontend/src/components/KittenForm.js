@@ -21,29 +21,34 @@ const KittenForm = props => {
                 </div>
 
                 <div className="flex-item-left">
-                    <label>Sex: </label>
-                    <div className="radio-buttons">
+                    <label className="input-label">Sex: </label>
 
-                        <div>
-                            <input className="radio" type="radio" id="male" name="sex" value="Male" checked={kitten.sex === "Male"} onChange={props.handleChange}/> &nbsp;
+                    <div className="radio">
+                        <input type="radio" id="male" name="sex" value="male" checked onChange={props.handleChange}/>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="sex" value="female" checked onChange={props.handleChange}/>
+                        <label for="female">Female</label>
+                    </div>
+
+
+                    {/* <div className="radio-buttons">
+                        <div className="radio"></div> */}
+{/* 
                             <label for="male" class="option male">
                                 <span className="radio-label">Male</span>
-                            </label>
-                        </div>
-                        
-                        <div>
-                            <input className="radio" type="radio" id="female" name="sex" value="Female" checked={kitten.sex === "Female"} onChange={props.handleChange}/> &nbsp;
-                            <label for="female" class="option female">
+                            </label> */}
+
+                            {/* <input className="radio-right" type="radio" label="Female" id="female" name="sex" value="Female" checked={kitten.sex === "Female"} onChange={props.handleChange}/> &nbsp; */}
+                            {/* <label for="female" class="option female">
                                 <span className="radio-label">Female</span>
-                            </label>
-                        </div>
-                        
-                    </div>
+                            </label> */}
+
+                    {/* </div> */}
 
                 </div>
 
                 <div className="flex-item-right">
-                    <label>Date of Birth: </label>
+                    <label className="input-label">Date of Birth: </label>
                     <input type="date" value={kitten.dob} name="dob" onChange={props.handleChange} required/>
                 </div>  
 
@@ -65,33 +70,38 @@ const KittenForm = props => {
 
                 <div className="flex-item-full"><h3>Medical Information</h3></div>
 
-                <div>
-                    <div>
-                        <div className="label">
-                            <label>Altered: </label> &nbsp; &nbsp;
-                            <input className="radio" type="radio" id="yes" name="altered" value="Yes" checked={kitten.altered === "Yes"} onChange={props.handleChange}/> &nbsp;
-                            <label htmlFor="yes">Yes</label> &nbsp;
-                            <input className="radio" type="radio" id="no" name="altered" value="No" checked={kitten.altered === "No"} onChange={props.handleChange}/> &nbsp;
-                            <label htmlFor="no">No</label>
-                        </div>
-                    </div> 
+                <div className="flex-item-left">
+                    <label>Sex: </label>
+
+                    <div className="radio-buttons">
+
+                        <input className="radio" label="Yes" type="radio" id="yes" name="altered" value="Yes" checked={kitten.altered === "Yes"} onChange={props.handleChange}/> &nbsp;
+                            {/* <label for="male" class="option male">
+                                <span className="radio-label">Male</span>
+                            </label> */}
+
+                        <input className="radio" label="No" type="radio" id="no" name="altered" value="No" checked={kitten.altered === "No"} onChange={props.handleChange}/> &nbsp;
+                            {/* <label for="female" class="option female">
+                                <span className="radio-label">Female</span>
+                            </label> */}
+                    </div>
                 </div>
 
-                <input type="radio" name="select" id="option-1" checked/>
-   
-                <input type="radio" name="select" id="option-2"/>
-        
-                <label for="option-1" class="option option-1">
-                    
-                    <div class="dot"></div>
-                    <span>Student</span>
-                </label>
-        
-                <label for="option-2" class="option option-2">
-                    <div class="dot"></div>
-                    <span>Teacher</span>
-                </label>
-      
+                <div className="flex-item-right">
+                    <label>Altered: </label>
+                    <div className="radio-buttons">
+
+                        <input className="radio-left" label="Yes" type="radio" id="yes" name="altered" value="Yes" checked={kitten.altered === "Yes"} onChange={props.handleChange}/> &nbsp;
+                            {/* <label for="male" class="option male">
+                                <span className="radio-label">Male</span>
+                            </label> */}
+
+                        <input className="radio-right" label="No" type="radio" id="no" name="altered" value="No" checked={kitten.altered === "No"} onChange={props.handleChange}/> &nbsp;
+                            {/* <label for="female" class="option female">
+                                <span className="radio-label">Female</span>
+                            </label> */}
+                    </div>
+                </div>
 
                 <div>
                     <div>
@@ -197,7 +207,7 @@ const KittenForm = props => {
             </div>
         </div>
         </form>
-        
+
         </>
     )
 }
