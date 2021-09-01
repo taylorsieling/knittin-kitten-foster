@@ -255,6 +255,10 @@ a.button:hover {
   padding: 0px;
 }
 
+.kitten-header {
+  padding: 20px;
+}
+
 .kitten-info {
   font-size: 18px;
   text-align: left;

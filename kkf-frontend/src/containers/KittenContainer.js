@@ -16,9 +16,11 @@ class KittenContainer extends Component {
             <>
                 { kitten ?
                 <>
-                <div className="kittens">
-                    <h1>{kitten.name}</h1>
-                </div>
+               
+                    <div className="center kitten-header">
+                        <h1>{kitten.name}</h1>
+                    </div> 
+            
                 <div> 
                     <KittenShow id={kitten.id} kitten={kitten} handleDeleteClick={this.handleDelete}/>
                 </div> 
