@@ -151,28 +151,27 @@ class EditForm extends Component {
 
                 <div className="flex-item-full"><h3>Medical Information</h3></div>
 
-                <div>
-                    <div>
-                        <div className="label">
-                            <label>Altered: </label> &nbsp; &nbsp;
-                            <input className="radio" type="radio" id="true" name="altered" value="true" checked={this.state.altered === "true"} onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="true">Yes</label> &nbsp;
-                            <input className="radio" type="radio" id="no" name="altered" value="false" checked={this.state.altered === "false" } onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="false">No</label>
+                <div className="flex-item-left">
+                    <label className="input-label">Altered: </label>
+
+                        <div className="radio">
+                            <input type="radio" className="a-yes" id="a-yes" name="altered" value="Yes" checked={this.state.altered === "true"} onChange={this.handleChange}/>
+                            <label for="a-yes">Yes</label>
+                            <input type="radio" className="a-no" id="a-no" name="altered" value="No" checked={this.state.altered === "false" } onChange={this.handleChange}/>
+                            <label for="a-no">No</label>
                         </div>
-                    </div> 
                 </div>
 
-                <div>
-                    <div>
-                        <div className="label" >
-                            <label>Microchipped: </label> &nbsp; &nbsp;
-                            <input className="radio" type="radio" id="yes" value="true" name="microchipped" checked={this.state.microchipped === "true" } onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="true">Yes</label> &nbsp;
-                            <input className="radio" type="radio" id="no" value="false" name="microchipped" checked={this.state.microchipped === "false" } onChange={this.handleChange}/> &nbsp;
-                            <label htmlFor="false">No</label>
+                <div className="flex-item-right">
+                    <label className="input-label">Microchipped: </label>
+
+                    <div className="radio">
+                            <input type="radio" className="m-yes" id="m-yes" value="Yes" name="microchipped" checked={this.state.microchipped === "true" } onChange={this.handleChange}/> &nbsp;
+                            <label for="m-yes">Yes</label>
+                            <input type="radio" className="m-no" id="m-no" value="No" name="microchipped" checked={this.state.microchipped === "false" } onChange={this.handleChange}/> 
+                            <label for="m-no">No</label>
                         </div>
-                    </div> 
+                
                 </div>
 
                 <div className="flex-item-full"><h3>Intake Information</h3></div>
@@ -252,15 +251,15 @@ class EditForm extends Component {
                     </select>
                 </div>
 
-                <div className="grid-full">
+                <div className="flex-item-full">
                     <input type="textarea" value={this.state.description} name="description" placeholder="Pet Description" onChange={this.handleChange}/>
                 </div>
 
-                <div>
+                <div className="flex-item-full">
                     <input type="text" value={this.state.portrait_url} name="portrait_url" placeholder="Portrait URL" onChange={this.handleChange}/>
                 </div>
 
-                <div>
+                <div className="flex-item-full">
                     <input type="submit" name="submit" value={this.button}/>
                 </div>
                 

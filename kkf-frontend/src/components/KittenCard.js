@@ -4,6 +4,7 @@ import '../index.css'
 
 const KittenCard = ({kitten}) => {
     return (
+        <div>
         <div className="card">
            <div className="card-header">
             <Link className="kitten-link" key={kitten.id} to={`/kittens/${kitten.id}`}>
@@ -19,6 +20,7 @@ const KittenCard = ({kitten}) => {
                     {kitten.breed} - {kitten.pattern}<br/><br/>
                 </p>
             </div>
+        </div>
         </div>
     )
 }
