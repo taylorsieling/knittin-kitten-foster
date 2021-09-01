@@ -671,12 +671,33 @@ input[type=submit] {
   cursor: pointer;
 }
 
-.radio input#male:checked+label {
+.radio input.male:checked+label {
   background-color: #727375;
   color: white;
 }
 
-.radio input#female:checked+label {
+.radio input.female:checked+label {
   background-color: #727375;
   color: white;
 }
+
+.radio input.m-yes:checked+label {
+  background-color: #727375;
+  color: white;
+}
+
+.radio input.m-no:checked+label {
+  background-color: #727375;
+  color: white;
+}
+
+.radio input.a-yes:checked+label {
+  background-color: #727375;
+  color: white;
+}
+
+.radio input.a-no:checked+label {
+  background-color: #727375;
+  color: white;
+}
+
