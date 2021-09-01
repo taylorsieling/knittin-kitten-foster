@@ -105,50 +105,51 @@ class EditForm extends Component {
                 <div>
                 <form onSubmit={this.handleSubmit}>
             <div className="form">
-            <div className="form-grid">
+            <div className="form-flexbox">
                 
-                <div className="grid-full"><h3>Kitten Description</h3></div>
+                <div className="flex-item-full"><h3>Kitten Description</h3></div>
                 
-                <div>
+                <div className="flex-item-left">
                     <input className="input-txt" type="text" value={this.state.name} name="name" placeholder="Name" onChange={this.handleChange}/>
                 </div>
 
-                <div>
+                <div className="flex-item-right">
                     <input type="text" value={this.state.age} name="age" placeholder="Age" onChange={this.handleChange}/>
                 </div>
 
-                <div>
-                    <div>
-                        <label>Sex: </label> <br/> <br/>
-                        <input className="radio" type="radio" id="male" name="sex" value="Male" checked={this.state.sex === "Male"} onChange={this.handleChange}/> &nbsp;
-                        <label htmlFor="male">Male</label> &nbsp;
-                        <input className="radio" type="radio" id="female" name="sex" value="Female" checked={this.state.sex === "Female"} onChange={this.handleChange}/> &nbsp;
-                        <label htmlFor="female">Female</label>
+                <div className="flex-item-left">
+                    <label className="input-label">Sex: </label>
+
+                    <div className="radio">
+                        <input type="radio" className="male"  id="male" name="sex" value="Male" checked={this.state.sex === "Male"} onChange={this.handleChange}/> 
+                        <label for="male">Male</label>
+                        <input type="radio" className="female"  id="female" name="sex" value="Female" checked={this.state.sex === "Female"} onChange={this.handleChange}/>
+                        <label for="female">Female</label>
                     </div>
                 </div>
 
-                <div className="label">
-                    <label>Date of Birth: </label>
+                <div className="flex-item-right">
+                <label className="input-label">Date of Birth: </label>
                     <input type="date" value={this.state.dob} name="dob" onChange={this.handleChange}/>
                 </div>  
 
-                <div>
+                <div className="flex-item-left">
                     <input type="text" value={this.state.weight} name="weight" placeholder="Weight" onChange={this.handleChange}/>
                 </div>   
 
-                <div>
+                <div className="flex-item-right">
                     <input type="text" value={this.state.breed} name="breed" placeholder="Breed" onChange={this.handleChange}/>
                 </div> 
 
-                <div>
+                <div className="flex-item-left">
                     <input type="text" value={this.state.color} name="color" placeholder="Color" onChange={this.handleChange}/>
                 </div>
                 
-                <div>
+                <div className="flex-item-right">
                     <input type="text" value={this.state.pattern} name="pattern" placeholder="Pattern" onChange={this.handleChange}/>
                 </div>
 
-                <div className="grid-full"><h3>Medical Information</h3></div>
+                <div className="flex-item-full"><h3>Medical Information</h3></div>
 
                 <div>
                     <div>
@@ -174,15 +175,15 @@ class EditForm extends Component {
                     </div> 
                 </div>
 
-                <div className="grid-full"><h3>Intake Information</h3></div>
+                <div className="flex-item-full"><h3>Intake Information</h3></div>
 
-                <div className="label">
-                        <label>Intake Date: </label><br/>
+                <div className="flex-item-left">
+                        <label className="input-label">Intake Date: </label><br/>
                         <input type="date" value={this.state.intake_date} name="intake_date" onChange={this.handleChange}/>
                 </div>
 
-                <div>
-                    <label>Intake Time: </label>
+                <div className="flex-item-right">
+                    <label className="input-label">Intake Time: </label>
                     <select className="select" name='intake_time' onChange={this.handleChange} value={this.state.intake_time}>
                         <option defaultValue value=''>Choose Time</option>
                         <option value='12:00AM'>12:00 AM</option>
@@ -212,8 +213,8 @@ class EditForm extends Component {
                     </select>
                 </div>
 
-                <div>
-                    <label>Intake Type: </label>
+                <div className="flex-item-left">
+                    <label className="input-label">Intake Type: </label>
                     <select className="select" name='intake_type' onChange={this.handleChange} value={this.state.intake_type}>
                         <option defaultValue value=''>Choose Type</option>
                         <option value='Stray'>Stray</option>
@@ -222,15 +223,15 @@ class EditForm extends Component {
                     </select>
                 </div>
 
-                <div>
-                    <label>Location Found: </label>
+                <div className="flex-item-right">
+                    <label className="input-label">Location Found: </label>
                     <input type="text" value={this.state.location_found} name="location_found" placeholder="Enter Address" onChange={this.handleChange}/>
                 </div>
 
-                <div className="grid-full"><h3>Adoption Information</h3></div>
+                <div className="flex-item-full"><h3>Adoption Information</h3></div>
         
-                <div>
-                    <label>Adoption Status: </label><br/>
+                <div className="flex-item-left">
+                    <label className="input-label">Adoption Status: </label><br/>
                     <select className="select" name='status' onChange={this.handleChange} value={this.state.status}>
                         <option defaultValue value=''>Choose Status</option>
                         <option value='Unavailable'>Unavailable</option>
@@ -240,8 +241,8 @@ class EditForm extends Component {
                     </select>
                 </div>
 
-                <div>
-                    <label>Current Location: </label>
+                <div className="flex-item-right">
+                    <label className="input-label">Current Location: </label>
                     <select className="select" name='current_location' onChange={this.handleChange} value={this.state.current_location}>
                         <option defaultValue value=''>Choose Location</option>
                         <option value='Foster-Home'>Foster Home</option>

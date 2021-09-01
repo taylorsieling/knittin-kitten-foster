@@ -24,7 +24,7 @@ const KittenForm = props => {
                     <label className="input-label">Sex: </label>
 
                     <div className="radio">
-                        <input type="radio" className="male" id="male" name="sex" value="male" Checked={kitten.sex === "Male"} onChange={props.handleChange}/>
+                        <input type="radio" className="male" id="male" name="sex" value="male" checked={kitten.sex === "Male"} onChange={props.handleChange}/>
                         <label for="male">Male</label>
                         <input type="radio" className="female" id="female" name="sex" value="female" defaultChecked={kitten.sex === "Female"} onChange={props.handleChange}/>
                         <label for="female">Female</label>
@@ -82,12 +82,12 @@ const KittenForm = props => {
                 <div className="flex-item-full"><h3>Intake Information</h3></div>
 
                 <div className="flex-item-left">
-                        <label>Intake Date: </label><br/>
+                        <label className="input-label">Intake Date: </label><br/>
                         <input type="date" value={kitten.intake_date} name="intake_date" onChange={props.handleChange} required/>
                 </div>
 
                 <div className="flex-item-right">
-                    <label>Intake Time: </label>
+                    <label className="input-label">Intake Time: </label>
                     <select className="select" name='intake_time' onChange={props.handleChange} value={kitten.intake_time}>
                         <option defaultValue value=''>Choose Time</option>
                         <option value='12:00AM'>12:00 AM</option>
