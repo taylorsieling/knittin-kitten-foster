@@ -480,8 +480,9 @@ button:hover {
     padding: 20px;
     width: 800px;
     border-radius: 0.2rem;
-    
   }
+
+
 
   .flex-item-full {
     text-align: center;
@@ -501,13 +502,18 @@ button:hover {
   }
   
   /* Responsive layout - makes a one column-layout instead of a two-column layout */
-  @media (max-width: 600px) {
+
+  @media (max-width: 800px) {
+    .form-flexbox {
+      margin: 0;
+      width: 100%;
+    }
+
     .flex-item-right, .flex-item-left {
       flex: 100%;
+      margin: 10px;
     }
   }
-
-
 
 .input,
 .select,
