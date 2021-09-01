@@ -61,16 +61,13 @@ const KittenShow = props => {
                         </p>
                     </div>
 
-                    <div className="kitten-info">
-                        <p>
+                    <div></div>
+
+                    <div className="btn-block align-right">
                         <Link className="button" key={kitten.id} to={`/kittens/${kitten.id}/edit`}>EDIT</Link>
-                        </p>
+                        <button className="button" id={kitten.id} onClick={props.handleDeleteClick}>DELETE</button>                   
                     </div>
-                    <div className="kitten-info">
-                        <p>
-                            <button id={kitten.id} onClick={props.handleDeleteClick}>DELETE</button>                   
-                        </p>
-                    </div>
+
 
                 </div>
             </div>
